@@ -12,7 +12,7 @@ public class Solution {
             return true;
         }
         // Create a stack object
-        Stack stack = new Stack();
+        Stack<ListNode> stack = new Stack<ListNode>();
         // Put each element in singly-linked list into stack
         stack.push(head);
         ListNode currentNode = head;
@@ -22,8 +22,8 @@ public class Solution {
         }
         // Compare each element
         currentNode = head;
-        while(currentNode != null){
-            stackNode = (ListNode)stack.pop();
+        while(currentNode != null && !stack.isEmpty()){
+            stackNode = stack.pop();
             if(currentNode.val != stackNode.val){
                 break;
             }
