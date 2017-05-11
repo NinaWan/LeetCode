@@ -2,10 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b3f8750c-132c-4d33-b201-19c7542d98ce" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/226-Invert Binary Tree/solution.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/371-Sum of Two Integers/solution.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/492-Construct the Rectangle/solution.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/563-Binary Tree Tilt/solution.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/100-Same Tree/solution.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/167-Two Sum II - Input array is sorted/solution.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/237-Delete Node in a Linked List/solution.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/349-Intersection of Two Arrays/solution.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/383-Ransom Note/solution.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/387-First Unique Character in a String/solution.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/404-Sum of Left Leaves/solution.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/504-Base 7/solution.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/506-Relative Ranks/solution.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/530-Minimum Absolute Difference in BST/solution.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <list id="3ff7ff66-7cc3-45d1-a73f-f43ccd86ccbe" name="Do Not Check In" comment="" />
@@ -28,101 +34,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/README.md">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1290">
-              <caret line="86" column="8" selection-start-line="86" selection-start-column="8" selection-end-line="86" selection-end-column="8" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="solution.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/575-Distribute Candies/solution.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="14" column="5" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="solution.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/521-Longest Uncommon Subsequence I/solution.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="14" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="solution.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/448-Find All Numbers Disappeared in an Array/solution.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="solution.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/104-Maximum Depth of Binary Tree/solution.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="15" column="1" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="solution.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/389-Find the Difference/solution.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="15" column="18" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="solution.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/371-Sum of Two Integers/solution.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="13" column="1" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="solution.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/226-Invert Binary Tree/solution.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="19" column="1" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="solution.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/492-Construct the Rectangle/solution.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="14" column="22" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="solution.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/563-Binary Tree Tilt/solution.java">
+        <entry file="file://$PROJECT_DIR$/504-Base 7/solution.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="19" column="1" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
+            <state relative-caret-position="270">
+              <caret line="18" column="1" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -157,6 +73,16 @@
         <option value="$PROJECT_DIR$/226-Invert Binary Tree/solution.java" />
         <option value="$PROJECT_DIR$/492-Construct the Rectangle/solution.java" />
         <option value="$PROJECT_DIR$/563-Binary Tree Tilt/solution.java" />
+        <option value="$PROJECT_DIR$/530-Minimum Absolute Difference in BST/solution.java" />
+        <option value="$PROJECT_DIR$/167-Two Sum II - Input array is sorted/solution.java" />
+        <option value="$PROJECT_DIR$/506-Relative Ranks/solution.java" />
+        <option value="$PROJECT_DIR$/349-Intersection of Two Arrays/solution.java" />
+        <option value="$PROJECT_DIR$/383-Ransom Note/solution.java" />
+        <option value="$PROJECT_DIR$/404-Sum of Left Leaves/solution.java" />
+        <option value="$PROJECT_DIR$/387-First Unique Character in a String/solution.java" />
+        <option value="$PROJECT_DIR$/237-Delete Node in a Linked List/solution.java" />
+        <option value="$PROJECT_DIR$/100-Same Tree/solution.java" />
+        <option value="$PROJECT_DIR$/504-Base 7/solution.java" />
       </list>
     </option>
   </component>
@@ -225,7 +151,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="563-Binary Tree Tilt" />
+              <option name="myItemId" value="504-Base 7" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -239,35 +165,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="561-Array Partition I" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LeetCode" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LeetCode" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="226-Invert Binary Tree" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LeetCode" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LeetCode" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="217-Contains Duplicate" />
+              <option name="myItemId" value="500-Keyboard Row" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -279,7 +177,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/WarCardGame" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/TEMP - Code/Others" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="settings.editor.selected.configurable" value="settings.github" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
@@ -287,11 +185,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/563-Binary Tree Tilt" />
-      <recent name="$PROJECT_DIR$/492-Construct the Rectangle" />
-      <recent name="$PROJECT_DIR$/226-Invert Binary Tree" />
-      <recent name="$PROJECT_DIR$/371-Sum of Two Integers" />
-      <recent name="$PROJECT_DIR$/389-Find the Difference" />
+      <recent name="$PROJECT_DIR$/504-Base 7" />
+      <recent name="$PROJECT_DIR$/100-Same Tree" />
+      <recent name="$PROJECT_DIR$/237-Delete Node in a Linked List" />
+      <recent name="$PROJECT_DIR$/387-First Unique Character in a String" />
+      <recent name="$PROJECT_DIR$/404-Sum of Left Leaves" />
     </key>
   </component>
   <component name="RunManager">
@@ -730,7 +628,7 @@
       <workItem from="1493819402845" duration="3965000" />
       <workItem from="1493838138745" duration="7040000" />
       <workItem from="1494263271264" duration="4691000" />
-      <workItem from="1494449859444" duration="1939000" />
+      <workItem from="1494449859444" duration="8022000" />
     </task>
     <task id="LOCAL-00001" summary="05/03/2017 First commit">
       <created>1493844843175</created>
@@ -743,10 +641,10 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17635000" />
+    <option name="totallyTimeSpent" value="23718000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1230" height="777" extended-state="6" />
+    <frame x="0" y="23" width="1230" height="777" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1055,6 +953,86 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
           <caret line="19" column="1" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/530-Minimum Absolute Difference in BST/solution.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="12" column="29" selection-start-line="12" selection-start-column="29" selection-end-line="12" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/167-Two Sum II - Input array is sorted/solution.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/506-Relative Ranks/solution.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/349-Intersection of Two Arrays/solution.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="35" selection-start-line="17" selection-start-column="35" selection-end-line="17" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/383-Ransom Note/solution.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/404-Sum of Left Leaves/solution.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="23" selection-start-line="9" selection-start-column="23" selection-end-line="9" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/387-First Unique Character in a String/solution.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="24" column="5" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/237-Delete Node in a Linked List/solution.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="1" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/100-Same Tree/solution.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="1" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/504-Base 7/solution.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="1" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
           <folding />
         </state>
       </provider>
