@@ -3,19 +3,19 @@ public class NumArray {
 
     public NumArray(int[] nums) {
         this.nums = nums;
-        for(int i = 0; i<nums.length; i++){
-            if(i == 0){
+        for (int i = 0; i < nums.length; i++) {
+            if (i == 0) {
                 this.nums[i] = nums[i];
-            }else{
-                this.nums[i] = nums[i] + this.nums[i-1];
+            } else {
+                this.nums[i] = nums[i] + this.nums[i - 1];
             }
         }
     }
 
     public int sumRange(int i, int j) {
-        if(i>0){
-            return nums[j] - nums[i-1];
-        }else{
+        if (i > 0) {
+            return nums[j] - nums[i - 1];
+        } else {
             return nums[j];
         }
     }

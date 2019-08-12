@@ -6,14 +6,14 @@ class MyQueue {
     // Push element x to the back of queue.
     public void push(int x) {
         positive.push(x);
-        while(!reverse.isEmpty()){
+        while (!reverse.isEmpty()) {
             reverse.pop();
         }
-        while(!positive.isEmpty()){
+        while (!positive.isEmpty()) {
             reverse.push(positive.peek());
             temp.push(positive.pop());
         }
-        while(!temp.isEmpty()){
+        while (!temp.isEmpty()) {
             positive.push(temp.pop());
         }
     }
@@ -21,14 +21,14 @@ class MyQueue {
     // Removes the element from in front of queue.
     public void pop() {
         reverse.pop();
-        while(!positive.isEmpty()){
+        while (!positive.isEmpty()) {
             positive.pop();
         }
-        while(!reverse.isEmpty()){
+        while (!reverse.isEmpty()) {
             positive.push(reverse.peek());
             temp.push(reverse.pop());
         }
-        while(!temp.isEmpty()){
+        while (!temp.isEmpty()) {
             reverse.push(temp.pop());
         }
     }

@@ -7,10 +7,10 @@ public class Solution {
         int count = 0;
         int i = 0;
         int j = 0;
-        while(i<g.length && j<s.length){
-            if(g[i] > s[j]){
+        while (i < g.length && j < s.length) {
+            if (g[i] > s[j]) {
                 j++;
-            }else{
+            } else {
                 i++;
                 count++;
                 j++;

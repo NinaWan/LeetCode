@@ -3,11 +3,11 @@ public class Solution {
         int result = 0;
         long sum = 0;
 
-        while(sum <= n){
-            result ++;
+        while (sum <= n) {
+            result++;
             sum += result;
         }
 
-        return result-1;
+        return result - 1;
     }
 }

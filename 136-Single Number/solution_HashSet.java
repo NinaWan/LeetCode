@@ -11,7 +11,7 @@ public class Solution {
                 result.add(num);
             }
         }
-        for(Object single:result){
+        for (Object single : result) {
             return (Integer) single;
         }
         return Integer.MIN_VALUE;

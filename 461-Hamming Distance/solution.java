@@ -6,10 +6,10 @@ public class Solution {
         int quotient = number;
         int remainder;
 
-        while(quotient != 0){
-            quotient = number/2;
-            remainder = number%2;
-            if(remainder == 1){
+        while (quotient != 0) {
+            quotient = number / 2;
+            remainder = number % 2;
+            if (remainder == 1) {
                 count += 1;
             }
             number = quotient;

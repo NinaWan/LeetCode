@@ -1,10 +1,10 @@
 /**
  * Definition for a binary tree node.
  * public class TreeNode {
- *     int val;
- *     TreeNode left;
- *     TreeNode right;
- *     TreeNode(int x) { val = x; }
+ * int val;
+ * TreeNode left;
+ * TreeNode right;
+ * TreeNode(int x) { val = x; }
  * }
  */
 public class Solution {
@@ -12,25 +12,25 @@ public class Solution {
         Queue<TreeNode> ancestorsOfp = getAllAncestors(root, p);
         Queue<TreeNode> ancestorsOfq = getAllAncestors(root, q);
         TreeNode result = null;
-        while(!ancestorsOfp.isEmpty() && !ancestorsOfq.isEmpty() && ancestorsOfp.peek() == ancestorsOfq.peek()){
+        while (!ancestorsOfp.isEmpty() && !ancestorsOfq.isEmpty() && ancestorsOfp.peek() == ancestorsOfq.peek()) {
             result = ancestorsOfp.poll();
             ancestorsOfq.poll();
         }
         return result;
     }
 
-    private Queue<TreeNode> getAllAncestors(TreeNode root, TreeNode child){
+    private Queue<TreeNode> getAllAncestors(TreeNode root, TreeNode child) {
         Queue<TreeNode> ancestors = new LinkedList<TreeNode>();
         boolean flag = true;
         TreeNode currentNode = root;
-        while(flag){
+        while (flag) {
             ancestors.add(currentNode);
-            if(currentNode.val == child.val){
+            if (currentNode.val == child.val) {
                 flag = false;
-            }else{
-                if(child.val < currentNode.val){
+            } else {
+                if (child.val < currentNode.val) {
                     currentNode = currentNode.left;
-                }else{
+                } else {
                     currentNode = currentNode.right;
                 }
             }

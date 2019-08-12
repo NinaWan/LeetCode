@@ -5,7 +5,7 @@ public class Solution {
         int previousRob = 0;
         int previousNotRob = 0;
 
-        for(int i=0; i<nums.length; i++){
+        for (int i = 0; i < nums.length; i++) {
             currentRob = previousNotRob + nums[i];
             currentNotRob = Math.max(previousRob, previousNotRob);
             previousRob = currentRob;

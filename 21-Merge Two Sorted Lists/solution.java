@@ -1,9 +1,9 @@
 /**
  * Definition for singly-linked list.
  * public class ListNode {
- *     int val;
- *     ListNode next;
- *     ListNode(int x) { val = x; }
+ * int val;
+ * ListNode next;
+ * ListNode(int x) { val = x; }
  * }
  */
 public class Solution {
@@ -13,41 +13,41 @@ public class Solution {
         ListNode p2 = l2;
         ListNode p3 = mergedList;
 
-        while(p1 != null && p2 != null){
+        while (p1 != null && p2 != null) {
             ListNode next = null;
-            if(p1.val >= p2.val){
+            if (p1.val >= p2.val) {
                 next = p2;
                 p2 = p2.next;
-            }else{
+            } else {
                 next = p1;
                 p1 = p1.next;
             }
 
-            if(p3 == null){
+            if (p3 == null) {
                 mergedList = next;
                 p3 = mergedList;
-            }else{
+            } else {
                 p3.next = next;
                 p3 = p3.next;
             }
         }
 
-        while(p1 != null){
-            if(p3 != null){
+        while (p1 != null) {
+            if (p3 != null) {
                 p3.next = p1;
                 p3 = p3.next;
-            }else{
+            } else {
                 mergedList = p1;
                 p3 = mergedList;
             }
             p1 = p1.next;
         }
 
-        while(p2 != null){
-            if(p3 != null){
+        while (p2 != null) {
+            if (p3 != null) {
                 p3.next = p2;
                 p3 = p3.next;
-            }else{
+            } else {
                 mergedList = p2;
                 p3 = mergedList;
             }
