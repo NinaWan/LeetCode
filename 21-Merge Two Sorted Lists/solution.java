@@ -6,53 +6,51 @@
  * ListNode(int x) { val = x; }
  * }
  */
-public class Solution {
+class Solution {
     public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
-        ListNode mergedList = null;
-        ListNode p1 = l1;
-        ListNode p2 = l2;
-        ListNode p3 = mergedList;
+        if (l1 == null) {
+            return l2;
+        }
 
-        while (p1 != null && p2 != null) {
-            ListNode next = null;
-            if (p1.val >= p2.val) {
-                next = p2;
-                p2 = p2.next;
-            } else {
-                next = p1;
-                p1 = p1.next;
+        if (l2 == null) {
+            return l1;
+        }
+
+        ListNode dummy = new ListNode(0);
+        ListNode p = null;
+
+        while (l1 != null || l2 != null) {
+            if (l1 == null) {
+                p.next = l2;
+                break;
             }
 
-            if (p3 == null) {
-                mergedList = next;
-                p3 = mergedList;
+            if (l2 == null) {
+                p.next = l1;
+                break;
+            }
+
+            if (l1.val < l2.val) {
+                if (p == null) {
+                    p = l1;
+                    dummy.next = p;
+                } else {
+                    p.next = l1;
+                    p = l1;
+                }
+                l1 = l1.next;
             } else {
-                p3.next = next;
-                p3 = p3.next;
+                if (p == null) {
+                    p = l2;
+                    dummy.next = p;
+                } else {
+                    p.next = l2;
+                    p = l2;
+                }
+                l2 = l2.next;
             }
         }
 
-        while (p1 != null) {
-            if (p3 != null) {
-                p3.next = p1;
-                p3 = p3.next;
-            } else {
-                mergedList = p1;
-                p3 = mergedList;
-            }
-            p1 = p1.next;
-        }
-
-        while (p2 != null) {
-            if (p3 != null) {
-                p3.next = p2;
-                p3 = p3.next;
-            } else {
-                mergedList = p2;
-                p3 = mergedList;
-            }
-            p2 = p2.next;
-        }
-        return mergedList;
+        return dummy.next;
     }
 }
