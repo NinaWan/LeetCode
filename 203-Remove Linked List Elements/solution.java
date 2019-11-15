@@ -8,26 +8,20 @@
  */
 class Solution {
     public ListNode removeElements(ListNode head, int val) {
-        if (null == head) {
-            return head;
-        }
+        ListNode dummy = new ListNode(0);
+        dummy.next = head;
+        ListNode pre = dummy;
+        ListNode curr = head;
 
-        ListNode current = head;
-        ListNode pre = null;
-        while (null != current) {
-            if (val == current.val) {
-                if (null == pre) {
-                    head = current.next;
-                } else {
-                    pre.next = current.next;
-                }
+        while (curr != null) {
+            if (curr.val == val) {
+                pre.next = curr.next;
             } else {
-                pre = current;
+                pre = curr;
             }
-
-            current = current.next;
+            curr = curr.next;
         }
 
-        return head;
+        return dummy.next;
     }
 }
