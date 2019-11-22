@@ -1,72 +1,58 @@
 class Solution {
     public int[] searchRange(int[] nums, int target) {
-        int[] result = new int[]{-1, -1};
-
-        if (null == nums || nums.length == 0) {
-            return result;
+        if (nums == null || nums.length == 0) {
+            return new int[]{-1, -1};
         }
 
-        int start = 0, end = nums.length - 1;
+        int start = 0;
+        int end = nums.length - 1;
+        int[] result = new int[2];
+        int mid = 0;
+        Arrays.fill(result, -1);
 
         // find the first position
         while (start + 1 < end) {
-            int mid = start + (end - start) / 2;
+            mid = start + (end - start) / 2;
 
-            if (nums[mid] == target) {
-                if (mid == 0 || nums[mid - 1] != target) {
-                    result[0] = mid;
-                    break;
-                } else {
-                    end = mid;
-                    continue;
-                }
+            if (nums[mid] == target && (mid == 0 || nums[mid - 1] != target)) {
+                result[0] = mid;
+                break;
             }
 
-            if (nums[mid] > target) {
-                end = mid;
+            if (nums[mid] < target) {
+                start = mid + 1;
             } else {
-                start = mid;
+                end = mid - 1;
             }
         }
 
-
-        if (nums[end] == target && result[0] == -1) {
-            result[0] = end;
+        if (result[0] == -1) {
+            result[0] = nums[start] == target ? start :
+                    nums[end] == target ? end : -1;
         }
 
-        if (nums[start] == target) {
-            result[0] = start;
-        }
-
-        // find the last position
         start = 0;
         end = nums.length - 1;
+
+        // find the last position
         while (start + 1 < end) {
-            int mid = start + (end - start) / 2;
+            mid = start + (end - start) / 2;
 
-            if (nums[mid] == target) {
-                if (mid == nums.length - 1 || nums[mid + 1] != target) {
-                    result[1] = mid;
-                    break;
-                } else {
-                    start = mid;
-                    continue;
-                }
+            if (nums[mid] == target && (mid == nums.length - 1 || nums[mid + 1] != target)) {
+                result[1] = mid;
+                break;
             }
 
-            if (nums[mid] > target) {
-                end = mid;
+            if (nums[mid] <= target) {
+                start = mid + 1;
             } else {
-                start = mid;
+                end = mid - 1;
             }
         }
 
-        if (nums[start] == target && result[1] == -1) {
-            result[1] = start;
-        }
-
-        if (nums[end] == target) {
-            result[1] = end;
+        if (result[1] == -1) {
+            result[1] = nums[end] == target ? end :
+                    nums[start] == target ? start : -1;
         }
 
         return result;

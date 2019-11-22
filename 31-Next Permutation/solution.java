@@ -1,41 +1,28 @@
 class Solution {
     public void nextPermutation(int[] nums) {
-        if (nums.length < 2) {
+        if (nums == null || nums.length == 0) {
             return;
         }
 
-        int curr = nums[nums.length - 1];
-
-        for (int i = nums.length - 1; i > 0; i--) {
-            int pre = nums[i - 1];
-
-            if (curr > pre) {
-                int j = i;
-                for (; j < nums.length; j++) {
-                    if (pre < nums[j]) {
+        int i = nums.length - 1;
+        for (; i > 0; i--) {
+            if (nums[i] > nums[i - 1]) {
+                for (int j = i; j < nums.length; j++) {
+                    if (j == nums.length - 1 || (nums[j] > nums[i - 1] && nums[j + 1] <= nums[i - 1])) {
+                        int temp = nums[j];
+                        nums[j] = nums[i - 1];
+                        nums[i - 1] = temp;
                         break;
                     }
                 }
-                nums[i - 1] = nums[j];
-                nums[j] = pre;
                 break;
-            } else {
-                curr = pre;
-                insertIntoSortedNums(i - 1, nums);
             }
         }
-    }
 
-    private void insertIntoSortedNums(int start, int[] sortedNums) {
-        int greater;
-        for (int i = start; i < sortedNums.length - 1; i++) {
-            if (sortedNums[i] > sortedNums[i + 1]) {
-                greater = sortedNums[i];
-                sortedNums[i] = sortedNums[i + 1];
-                sortedNums[i + 1] = greater;
-            } else {
-                break;
-            }
+        for (int m = i, n = nums.length - 1; m < n; m++, n--) {
+            int temp = nums[m];
+            nums[m] = nums[n];
+            nums[n] = temp;
         }
     }
 }
