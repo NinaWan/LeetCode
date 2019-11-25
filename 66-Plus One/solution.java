@@ -1,29 +1,27 @@
-public class Solution {
+class Solution {
     public int[] plusOne(int[] digits) {
+        if (digits == null || digits.length == 0) {
+            return new int[]{1};
+        }
+
+        int carryOver = 1;
         List<Integer> result = new ArrayList();
-        int i = digits.length - 1;
-        while (i > -1 && digits[i] == 9) {
-            result.add(0);
-            if (i == 0) {
-                result.add(1);
-            }
-            i--;
+
+        for (int i = digits.length - 1; i >= 0; i--) {
+            int sum = digits[i] + carryOver;
+            carryOver = sum / 10;
+            result.add(0, sum % 10);
         }
 
-        for (int k = i; k > -1; k--) {
-            if (k == i) {
-                result.add(digits[k] + 1);
-            } else {
-                result.add(digits[k]);
-            }
+        if (carryOver != 0) {
+            result.add(0, carryOver);
         }
 
-        int[] resultArray = new int[result.size()];
-
-        for (int j = 0; j < result.size(); j++) {
-            resultArray[j] = result.get(result.size() - j - 1);
+        int[] resA = new int[result.size()];
+        for (int i = 0; i < result.size(); i++) {
+            resA[i] = result.get(i);
         }
 
-        return resultArray;
+        return resA;
     }
 }
