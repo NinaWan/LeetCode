@@ -1,6 +1,6 @@
 class Solution {
     public boolean search(int[] nums, int target) {
-        if (null == nums || nums.length == 0) {
+        if (nums == null || nums.length == 0) {
             return false;
         }
 
@@ -13,28 +13,27 @@ class Solution {
                 return true;
             }
 
-            if (nums[start] < nums[mid]) {
+            if (nums[mid] == nums[start]) {
+                start++;
+                continue;
+            }
+
+            if (nums[mid] > nums[start]) {
                 if (target < nums[mid] && target >= nums[start]) {
-                    end = mid;
+                    end = mid - 1;
                 } else {
-                    start = mid;
-                }
-            } else if (nums[start] > nums[mid]) {
-                if (target > nums[mid] && target <= nums[end]) {
-                    start = mid;
-                } else {
-                    end = mid;
+                    start = mid + 1;
                 }
             } else {
-                start++;
+                if (target > nums[mid] && target <= nums[end]) {
+                    start = mid + 1;
+                } else {
+                    end = mid - 1;
+                }
             }
         }
 
-        if (nums[start] == target) {
-            return true;
-        }
-
-        if (nums[end] == target) {
+        if (nums[start] == target || nums[end] == target) {
             return true;
         }
 
