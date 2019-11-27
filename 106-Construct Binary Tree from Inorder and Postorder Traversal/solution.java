@@ -9,7 +9,7 @@
  */
 class Solution {
     public TreeNode buildTree(int[] inorder, int[] postorder) {
-        if (null == inorder || inorder.length == 0 || null == postorder || postorder.length == 0) {
+        if (inorder == null || inorder.length == 0 || postorder == null || postorder.length == 0) {
             return null;
         }
 
@@ -23,14 +23,13 @@ class Solution {
 
         TreeNode root = new TreeNode(postorder[postStart]);
 
-        // find the root index in inorder array
-        for (int i = 0; i < inorder.length; i++) {
-            int nodeCountLeft = i - inStart;
-            int nodeCountRight = inEnd - i;
+        for (int i = inStart; i <= inEnd; i++) {
+            int nodeLeft = i - inStart;
+            int nodeRight = inEnd - i;
 
             if (inorder[i] == root.val) {
-                root.left = divideConquer(inorder, inStart, i - 1, postorder, postStart - nodeCountRight - 1, postStart - nodeCountRight - nodeCountLeft);
-                root.right = divideConquer(inorder, i + 1, inEnd, postorder, postStart - 1, postStart - nodeCountRight);
+                root.left = divideConquer(inorder, inStart, i - 1, postorder, postEnd + nodeLeft - 1, postEnd);
+                root.right = divideConquer(inorder, i + 1, inEnd, postorder, postStart - 1, postStart - nodeRight);
                 break;
             }
         }
