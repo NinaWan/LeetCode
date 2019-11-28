@@ -1,8 +1,10 @@
-public class Solution {
+class Solution {
     public int maxProfit(int[] prices) {
-        if (prices.length < 2) return 0;
+        if (prices == null || prices.length < 2) {
+            return 0;
+        }
 
-        int result = 0;
+        int max = 0;
         int bottom = prices[0];
 
         for (int i = 1; i < prices.length; i++) {
@@ -11,17 +13,12 @@ public class Solution {
                 continue;
             }
 
-            if (i + 1 == prices.length) {
-                result += prices[i] - bottom;
-                continue;
-            }
-
-            if (i + 1 < prices.length && prices[i + 1] < prices[i]) {
-                result += prices[i] - bottom;
-                bottom = prices[i + 1];
+            if (i == prices.length - 1 || prices[i] >= prices[i + 1]) {
+                max += prices[i] - bottom;
+                bottom = i == prices.length - 1 ? bottom : prices[i + 1];
             }
         }
 
-        return result;
+        return max;
     }
 }
