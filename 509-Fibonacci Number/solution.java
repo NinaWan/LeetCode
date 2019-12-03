@@ -1,21 +1,17 @@
 class Solution {
     public int fib(int N) {
-        if (N == 0 || N == 1) {
+        if (N < 2) {
             return N;
         }
 
-        int fp = 1;
-        int fpp = 0;
-        int f = fp;
-
-        while (N > 1) {
-            f = fp + fpp;
-            int temp = fp;
-            fp = f;
-            fpp = temp;
-            N--;
+        int f1 = 0;
+        int f2 = 1;
+        for (int i = 2; i <= N; i++) {
+            int temp = f1 + f2;
+            f1 = f2;
+            f2 = temp;
         }
 
-        return f;
+        return f2;
     }
 }

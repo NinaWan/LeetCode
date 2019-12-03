@@ -1,7 +1,8 @@
 public class Solution {
     public int arrayPairSum(int[] nums) {
-        // Null
-        if (null == nums) return 0;
+        if (null == nums) {
+            return 0;
+        }
 
         Arrays.sort(nums);
         int result = 0;
