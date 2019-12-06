@@ -9,3 +9,5 @@
 ##Approach 2: Replace Element With Special Value
 Note: Usually used to avoid extra space
 #####289. Game of Life
+##Approach 3: Sliding Window
+#####643. Maximum Average Subarray I
