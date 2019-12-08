@@ -15,6 +15,7 @@ Note: Usually used to avoid extra space
 ##Approach 4: DP (Dynamic Programming)
 #####121. Best Time to Buy and Sell Stock
 #####718. Maximum Length of Repeated Subarray
+#####746. Min Cost Climbing Stairs
 ##Approach 5: DFS (Depth First Search)
 ##Approach 6: BFS (Breadth First Search)
 #####695. Max Area of Island
