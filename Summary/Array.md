@@ -19,3 +19,13 @@ Note: Usually used to avoid extra space
 ##Approach 5: DFS (Depth First Search)
 ##Approach 6: BFS (Breadth First Search)
 #####695. Max Area of Island
+##Approach 7: Binary Search
+#####162. Find Peak Element
+##Approach 8: Stack
+#####84. Largest Rectangle in Histogram
+##Approach 9: Backtracing
+#####79. Word Search
+#####90. Subsets II
+#####106. Construct Binary Tree from Inorder and Postorder Traversal
+##Approach 10: Union Find
+#####128. Longest Consecutive Sequence
