@@ -12,6 +12,7 @@ Note: Usually used to avoid extra space
 ##Approach 3: Sliding Window
 #####643. Maximum Average Subarray I
 #####713. Subarray Product Less Than K
+#####1040. Moving Stones Until Consecutive II
 ##Approach 4: DP (Dynamic Programming)
 #####121. Best Time to Buy and Sell Stock
 #####718. Maximum Length of Repeated Subarray
