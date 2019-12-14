@@ -24,6 +24,7 @@ Note: Usually used to avoid extra space
 #####695. Max Area of Island
 ##Approach 7: Binary Search
 #####162. Find Peak Element
+#####1011. Capacity To Ship Packages Within D Days
 ##Approach 8: Stack
 #####84. Largest Rectangle in Histogram
 ##Approach 9: Backtracing
