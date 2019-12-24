@@ -1,41 +1,27 @@
 class Solution {
     public int countCharacters(String[] words, String chars) {
-        if (null == words || words.length == 0 || chars.length() == 0) {
-            return 0;
-        }
-
         int result = 0;
-        Map<Character, Integer> frequenceC = new HashMap<>();
-
-        for (int i = 0; i < chars.length(); i++) {
-            Character current = chars.charAt(i);
-            frequenceC.put(current, frequenceC.getOrDefault(current, 0) + 1);
+        int[] charCount = new int[26];
+        for (char c : chars.toCharArray()) {
+            charCount[c - 'a']++;
         }
 
-        for (int m = 0; m < words.length; m++) {
-            Map<Character, Integer> frequenceW = new HashMap<>();
-            for (int n = 0; n < words[m].length(); n++) {
-                Character current = words[m].charAt(n);
-                frequenceW.put(current, frequenceW.getOrDefault(current, 0) + 1);
+        for (String word : words) {
+            int[] letterCount = new int[26];
+            for (char c : word.toCharArray()) {
+                letterCount[c - 'a']++;
             }
 
-            boolean flag = true;
-            for (Map.Entry current : frequenceW.entrySet()) {
-                int countW = frequenceW.get(current.getKey());
-                if (frequenceC.containsKey(current.getKey())) {
-                    int countC = frequenceC.get(current.getKey());
-                    if (countC < countW) {
-                        flag = false;
-                        break;
-                    }
-                } else {
-                    flag = false;
+            boolean isGood = true;
+            for (int i = 0; i < 26; i++) {
+                if (letterCount[i] > charCount[i]) {
+                    isGood = false;
                     break;
                 }
             }
 
-            if (flag) {
-                result += words[m].length();
+            if (isGood) {
+                result += word.length();
             }
         }
 
