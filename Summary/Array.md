@@ -1,6 +1,7 @@
 ##Approach 1: Two Pointers
 ###Slow-Fast
 ###Left-Right
+#####977. Squares of a Sorted Array
 ####Same Direction
 #####532. K-diff Pairs in an Array
 ####Different Direction
