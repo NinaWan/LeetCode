@@ -1,29 +1,28 @@
 class Solution {
     public int[] sortArrayByParity(int[] A) {
-        if (null == A || A.length == 0) {
-            return A;
-        }
+        int left = 0;
+        int right = A.length - 1;
 
-        int[] result = A.clone();
+        while (left < right) {
+            if (A[left] % 2 == 0) {
+                left++;
+                continue;
+            }
 
-        for (int left = 0, right = A.length - 1; left < right; ) {
-            int leftRemainder = result[left] % 2;
-            int rightRemainder = result[right] % 2;
-            if (leftRemainder == 1) {
-                if (rightRemainder == 0) {
-                    int temp = result[left];
-                    result[left] = result[right];
-                    result[right] = temp;
-                    left++;
-                    right--;
-                } else {
-                    right--;
-                }
-            } else {
+            if (A[right] % 2 == 1) {
+                right--;
+                continue;
+            }
+
+            if (A[left] % 2 == 1 && A[right] % 2 == 0) {
+                int temp = A[left];
+                A[left] = A[right];
+                A[right] = temp;
+                right--;
                 left++;
             }
         }
 
-        return result;
+        return A;
     }
 }
