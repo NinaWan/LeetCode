@@ -1,33 +1,27 @@
-public class Solution {
+class Solution {
     public boolean isValid(String s) {
-        if (s.length() % 2 != 0) return false;
-        Map sMap = initializeMap();
-        Stack stack = new Stack<Character>();
-        for (int i = 0; i < s.length(); i++) {
-            char current = s.charAt(i);
-            if (stack.empty() || !sMap.containsKey(current)) {
-                stack.push(current);
-            } else {
-                char top = (Character) stack.peek();
-                if (top == (char) sMap.get(current)) {
-                    stack.pop();
-                } else {
-                    stack.push(current);
-                }
-            }
-        }
-        if (stack.empty()) {
+        if (s == null || s.length() == 0) {
             return true;
-        } else {
+        }
+
+        if (s.length() % 2 != 0) {
             return false;
         }
-    }
 
-    private HashMap<Character, Character> initializeMap() {
-        HashMap map = new HashMap<Character, Character>();
-        map.put(')', '(');
-        map.put('}', '{');
-        map.put(']', '[');
-        return map;
+        Stack<Character> stack = new Stack();
+        Map<Character, Character> map = new HashMap() {{
+            put('}', '{');
+            put(')', '(');
+            put(']', '[');
+        }};
+        for (char c : s.toCharArray()) {
+            if (stack.isEmpty() || !map.containsKey(c) || !map.get(c).equals(stack.peek())) {
+                stack.push(c);
+            } else {
+                stack.pop();
+            }
+        }
+
+        return stack.isEmpty();
     }
 }
