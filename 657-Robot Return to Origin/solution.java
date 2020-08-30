@@ -5,8 +5,8 @@ class Solution {
         }
 
         int left = 0, right = 0, up = 0, down = 0;
-        for (int i = 0; i < moves.length(); i++) {
-            switch (moves.charAt(i)) {
+        for (char move : moves.toCharArray()) {
+            switch (move) {
                 case 'U':
                     up++;
                     break;
@@ -18,7 +18,6 @@ class Solution {
                     break;
                 case 'R':
                     right++;
-                    break;
             }
         }
 
