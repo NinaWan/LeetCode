@@ -6,11 +6,13 @@ public class Solution {
 
         for (int i = 0; i < t.length(); i++) {
             if (sTot.get(s.charAt(i)) == null) {
-                if (tSet.contains(t.charAt(i))) return false;
+                if (tSet.contains(t.charAt(i))) {
+                    return false;
+                }
                 sTot.put(s.charAt(i), t.charAt(i));
                 tSet.add(t.charAt(i));
-            } else {
-                if (sTot.get(s.charAt(i)) != t.charAt(i)) return false;
+            } else if (sTot.get(s.charAt(i)) != t.charAt(i)) {
+                return false;
             }
         }
         return true;
