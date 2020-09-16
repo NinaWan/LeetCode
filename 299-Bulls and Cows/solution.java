@@ -1,40 +1,26 @@
 class Solution {
     public String getHint(String secret, String guess) {
-        int bulls = 0;
-        int cows = 0;
+        Map<Character, Integer> freq = new HashMap();
+        int bull = 0;
+        int cow = 0;
 
-        if (null != secret && null != guess) {
-            int l = secret.length();
-            Map<String, Integer> sMapping = new HashMap<>();
-            Map<String, Integer> gMapping = new HashMap<>();
-            Map<String, Integer> bMapping = new HashMap<>();
-
-            for (int i = 0; i < l; i++) {
-                String s = String.valueOf(secret.charAt(i));
-                String g = String.valueOf(guess.charAt(i));
-
-                if (secret.charAt(i) == guess.charAt(i)) {
-                    bulls++;
-                    bMapping.put(s, bMapping.getOrDefault(s, 0) + 1);
-                }
-
-                sMapping.put(s, sMapping.getOrDefault(s, 0) + 1);
-                gMapping.put(g, gMapping.getOrDefault(g, 0) + 1);
-            }
-
-            for (Map.Entry current : gMapping.entrySet()) {
-                int sNum = sMapping.getOrDefault(current.getKey(), 0);
-                int gNum = (Integer) current.getValue();
-                int bNum = bMapping.getOrDefault(current.getKey(), 0);
-
-                if (sNum == 0) {
-                    continue;
-                }
-
-                cows += Math.min(sNum, gNum) - bNum;
+        for (int i = 0; i < secret.length(); i++) {
+            char sec = secret.charAt(i);
+            if (sec == guess.charAt(i)) {
+                bull++;
+            } else {
+                freq.put(sec, freq.getOrDefault(sec, 0) + 1);
             }
         }
 
-        return bulls + "A" + cows + "B";
+        for (int i = 0; i < guess.length(); i++) {
+            char gue = guess.charAt(i);
+            if (gue != secret.charAt(i) && freq.getOrDefault(gue, 0) != 0) {
+                cow++;
+                freq.put(gue, freq.get(gue) - 1);
+            }
+        }
+
+        return bull + "A" + cow + "B";
     }
 }
