@@ -1,29 +1,26 @@
-public class Solution {
+class Solution {
     public int longestPalindrome(String s) {
-        int result = 0;
-        int[] nums = new int[52];
+        int ans = 0;
+        int[] freq = new int[52];
 
-        for (int i = 0; i < s.length(); i++) {
-            if (s.charAt(i) > 90) {//lower case
-                nums[s.charAt(i) - 71] += 1;
-            } else {//upper case
-                nums[s.charAt(i) - 65] += 1;
+        for (char c : s.toCharArray()) {
+            if (c >= 'a' && c <= 'z') {
+                freq[c - 'a']++;
+            } else {
+                freq[c - 'A' + 26]++;
             }
         }
 
-        //loop nums
-        for (int i = 0; i < 52; i++) {
-            if (nums[i] > 1) {
-                result += (nums[i] / 2) * 2;
-                if (result % 2 == 0 && nums[i] % 2 == 1) {
-                    result += 1;
-                }
-            }
-            if (nums[i] == 1 && result % 2 == 0) {
-                result += 1;
+        int odd = 0;
+        for (int count : freq) {
+            if (count % 2 == 0) {
+                ans += count;
+            } else {
+                odd++;
+                ans += count - 1;
             }
         }
 
-        return result;
+        return odd == 0 ? ans : ans + 1;
     }
 }
