@@ -1,17 +1,16 @@
 class Solution {
     public int repeatedNTimes(int[] A) {
-        int result = Integer.MIN_VALUE;
-        Set<Integer> temp = new HashSet<>();
+        Set<Integer> seen = new HashSet();
+        int ans = 0;
 
-        for (int i = 0; i < A.length; i++) {
-            if (temp.contains(Integer.valueOf(A[i]))) {
-                result = A[i];
+        for (int a : A) {
+            if (seen.contains(a)) {
+                ans = a;
                 break;
-            } else {
-                temp.add(Integer.valueOf(A[i]));
             }
+            seen.add(a);
         }
 
-        return result;
+        return ans;
     }
 }
