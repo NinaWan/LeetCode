@@ -1,50 +1,42 @@
 class Solution {
     public int numPrimeArrangements(int n) {
-        int primeNum = countPrimes(n);
-        int nonPrimeNum = n - primeNum;
-        long result = 1;
-        int mod = (int) Math.pow(10, 9) + 7;
-
-        for (int i = 2; i <= primeNum; i++) {
-            result *= i;
-            if (result > mod) {
-                result = result % mod;
-            }
+        long ans = 1;
+        int primeCount = countPrimes(n);
+        for (int i = primeCount; i > 1; i--) {
+            ans *= i;
+            ans %= 1e9 + 7;
         }
 
-        for (int j = 2; j <= nonPrimeNum; j++) {
-            result *= j;
-            if (result > mod) {
-                result = result % mod;
-            }
+        for (int i = 2; i <= n - primeCount; i++) {
+            ans *= i;
+            ans %= 1e9 + 7;
         }
 
-        return (int) result;
+        return (int) ans;
     }
 
     private int countPrimes(int n) {
-        int result = 0;
+        boolean[] isPrime = new boolean[n + 1];
+        int ans = 0;
 
-        for (int current = 1; current <= n; current++) {
-            if (isPrime(current)) {
-                result++;
+        for (int i = 2; i < isPrime.length; i++) {
+            isPrime[i] = true;
+        }
+
+        for (int i = 2; i < Math.sqrt(n + 1); i++) {
+            if (!isPrime[i]) {
+                continue;
+            }
+
+            for (int j = i * i; j < n + 1; j += i) {
+                isPrime[j] = false;
             }
         }
 
-        return result;
-    }
-
-    private boolean isPrime(int num) {
-        if (num <= 1) {
-            return false;
+        for (boolean e : isPrime) {
+            ans += e ? 1 : 0;
         }
 
-        for (int i = 2; i * i <= num; i++) {
-            if (num % i == 0) {
-                return false;
-            }
-        }
-
-        return true;
+        return ans;
     }
 }

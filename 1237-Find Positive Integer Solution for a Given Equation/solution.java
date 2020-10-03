@@ -10,16 +10,13 @@
  */
 class Solution {
     public List<List<Integer>> findSolution(CustomFunction customfunction, int z) {
-        int x = 1;
-        int y = 1;
         List<List<Integer>> result = new ArrayList<>();
 
-        for (; customfunction.f(x, 1) <= z; x++) {
-            for (int j = 1; customfunction.f(x, j) <= z; j++) {
-                if (customfunction.f(x, j) == z) {
-                    result.add(Arrays.asList(x, j));
+        for (int x = 1; customfunction.f(x, 1) <= z; x++) {
+            for (int y = 1; customfunction.f(x, y) <= z; y++) {
+                if (customfunction.f(x, y) == z) {
+                    result.add(Arrays.asList(x, y));
                 }
-                y = j;
             }
         }
 
