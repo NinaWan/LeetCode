@@ -1,22 +1,21 @@
 class Solution {
     public int maxDistToClosest(int[] seats) {
-        int max = 0;
-        int curr = 0;
-        int left = 0;
-        int right = 0;
+        int ans = 0;
+        int left = -1;
 
-        for (int i = 0, j = 0; j < seats.length; j++) {
-            if (seats[j] == 0) {
-                if (i == 0 || j == seats.length - 1) {
-                    max = Math.max(max, j - i + 1);
+        for (int i = 0; i < seats.length; i++) {
+            if (i == seats.length - 1 && seats[i] != 1) {
+                ans = Math.max(ans, i - left);
+            } else if (seats[i] == 1) {
+                if (left == -1) {
+                    ans = Math.max(ans, i);
+                } else {
+                    ans = Math.max(ans, (i - left) / 2);
                 }
-
-                max = Math.max(max, (j - i + 1) / 2 + (j - i + 1) % 2);
-            } else {
-                i = j + 1;
+                left = i;
             }
         }
 
-        return max;
+        return ans;
     }
 }
