@@ -1,7 +1,8 @@
 public class Solution {
     // you need treat n as an unsigned value
     public int reverseBits(int n) {
-        if (n == 0) return 0;
+        if (n == 0)
+            return 0;
 
         long quotient;
         String result = "";

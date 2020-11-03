@@ -1,6 +1,7 @@
 public class Solution {
     public int findNthDigit(int n) {
-        if (n < 10) return n;
+        if (n < 10)
+            return n;
 
         int m = 2;
         long left = (long) ((9 * m - 1) * Math.pow(10, m) + 1) / 9;
@@ -9,7 +10,8 @@ public class Solution {
             left = (long) ((9 * m - 1) * Math.pow(10, m) + 1) / 9;
         }
 
-        if (left == n) return 9;
+        if (left == n)
+            return 9;
         left = (long) ((9 * (m - 1) - 1) * Math.pow(10, m - 1) + 1) / 9;
 
         int quotient = (int) (n - left) / m;

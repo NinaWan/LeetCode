@@ -12,6 +12,7 @@ class Solution {
             }
         }
 
-        return nums[start] == target ? start : -1;
+        return nums[start] == target ? start
+                                     : -1;
     }
 }

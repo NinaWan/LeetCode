@@ -1,7 +1,8 @@
 class Solution {
     public double myPow(double x, int n) {
         if (x == 1 || x == -1) {
-            return n % 2 == 0 ? 1.0 : x;
+            return n % 2 == 0 ? 1.0
+                              : x;
         }
 
         double ans = 1.0;

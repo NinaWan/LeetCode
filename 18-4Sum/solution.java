@@ -4,7 +4,10 @@ class Quadruplet {
     int num3;
     int num4;
 
-    public Quadruplet(int num1, int num2, int num3, int num4) {
+    public Quadruplet(int num1,
+                      int num2,
+                      int num3,
+                      int num4) {
         this.num1 = num1;
         this.num2 = num2;
         this.num3 = num3;
@@ -64,22 +67,24 @@ class Solution {
 
     public List<List<Integer>> dedup(List<List<Integer>> origin) {
         Set<Quadruplet> qSet = new HashSet();
-        origin.stream()
-                .map(list -> new Quadruplet(list.get(0), list.get(1), list.get(2), list.get(3)))
+        origin.stream().map(list -> new Quadruplet(list.get(0),
+                                                   list.get(1),
+                                                   list.get(2),
+                                                   list.get(3)))
                 .collect(Collectors.toList()).forEach(q -> qSet.add(q));
-        return qSet.stream()
-                .map(q -> new ArrayList<Integer>() {{
-                    add(q.num1);
-                    add(q.num2);
-                    add(q.num3);
-                    add(q.num4);
-                }})
-                .collect(Collectors.toList());
+        return qSet.stream().map(q -> new ArrayList<Integer>() {
+            {
+                add(q.num1);
+                add(q.num2);
+                add(q.num3);
+                add(q.num4);
+            }
+        }).collect(Collectors.toList());
     }
 
     public List<List<Integer>> twoSum(int[] nums, int target, int start, int end) {
         List<List<Integer>> result = new ArrayList();
-        for (int i = start, j = end; i < j; ) {
+        for (int i = start, j = end; i < j;) {
             if (nums[i] + nums[j] == target) {
                 result.add(Arrays.asList(nums[i], nums[j]));
                 i++;

@@ -20,7 +20,7 @@ class Solution {
         int[] result = new int[2];
         result[0] = Integer.MAX_VALUE;
 
-        for (int i = start, j = end; i < j; ) {
+        for (int i = start, j = end; i < j;) {
             if (nums[i] + nums[j] == target) {
                 result[0] = 0;
                 result[1] = nums[i] + nums[j];

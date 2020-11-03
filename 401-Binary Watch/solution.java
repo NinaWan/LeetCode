@@ -3,7 +3,8 @@ public class Solution {
         List<String> result = new ArrayList();
 
         if (num < 11) {
-            for (int i = 0; i <= (num > 4 ? 4 : num); i++) {
+            for (int i = 0; i <= (num > 4 ? 4
+                                          : num); i++) {
                 List<String> hours = new ArrayList();
                 List<String> mins = new ArrayList();
 
@@ -12,7 +13,8 @@ public class Solution {
 
                 for (String hour : hours) {
                     for (String min : mins) {
-                        if (Integer.valueOf(hour) > 11 || Integer.valueOf(min) > 59) continue;
+                        if (Integer.valueOf(hour) > 11 || Integer.valueOf(min) > 59)
+                            continue;
                         result.add(hour + ":" + min);
                     }
                 }

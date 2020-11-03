@@ -9,6 +9,7 @@ class Solution {
             ans++;
         }
 
-        return x / ans == ans ? ans : ans - 1;
+        return x / ans == ans ? ans
+                              : ans - 1;
     }
 }

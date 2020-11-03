@@ -1,11 +1,14 @@
 class Solution {
     public String[] findWords(String[] words) {
         List<String> list = new ArrayList();
-        Map<Integer, Set<Character>> map = new HashMap() {{
-            put(1, new HashSet(Arrays.asList('Q', 'q', 'W', 'w', 'E', 'e', 'R', 'r', 'T', 't', 'Y', 'y', 'U', 'u', 'I', 'i', 'O', 'o', 'P', 'p')));
-            put(2, new HashSet(Arrays.asList('A', 'a', 'S', 's', 'D', 'd', 'F', 'f', 'G', 'g', 'H', 'h', 'J', 'j', 'K', 'k', 'L', 'l')));
-            put(3, new HashSet(Arrays.asList('Z', 'z', 'X', 'x', 'C', 'c', 'V', 'v', 'B', 'b', 'N', 'n', 'M', 'm')));
-        }};
+        Map<Integer, Set<Character>> map = new HashMap() {
+            {
+                put(1, new HashSet(Arrays.asList('Q', 'q', 'W', 'w', 'E', 'e', 'R', 'r', 'T', 't', 'Y', 'y', 'U', 'u', 'I', 'i', 'O', 'o', 'P',
+                        'p')));
+                put(2, new HashSet(Arrays.asList('A', 'a', 'S', 's', 'D', 'd', 'F', 'f', 'G', 'g', 'H', 'h', 'J', 'j', 'K', 'k', 'L', 'l')));
+                put(3, new HashSet(Arrays.asList('Z', 'z', 'X', 'x', 'C', 'c', 'V', 'v', 'B', 'b', 'N', 'n', 'M', 'm')));
+            }
+        };
 
         for (String word : words) {
             if (word == null || word.equals("")) {

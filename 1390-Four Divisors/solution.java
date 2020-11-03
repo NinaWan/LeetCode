@@ -12,8 +12,10 @@ class Solution {
 
                 if (num % i == 0) {
                     sum += i;
-                    sum += i * i == num ? 0 : num / i;
-                    count += i * i == num ? 1 : 2;
+                    sum += i * i == num ? 0
+                                        : num / i;
+                    count += i * i == num ? 1
+                                          : 2;
                 }
             }
 

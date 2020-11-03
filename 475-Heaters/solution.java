@@ -6,7 +6,8 @@ class Solution {
 
         for (int i = 0; i < houses.length; i++) {
             int idx = Arrays.binarySearch(heaters, houses[i]);
-            idx = idx < 0 ? -(idx + 1) : idx;
+            idx = idx < 0 ? -(idx + 1)
+                          : idx;
             if (idx == 0) {
                 ans = Math.max(ans, heaters[0] - houses[i]);
             } else if (idx == heaters.length) {

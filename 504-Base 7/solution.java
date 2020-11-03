@@ -13,7 +13,8 @@ public class Solution {
             quotient = quotient / 7;
         }
 
-        if (num < 0) result = "-" + result;
+        if (num < 0)
+            result = "-" + result;
         return result;
     }
 }

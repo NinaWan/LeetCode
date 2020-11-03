@@ -10,12 +10,16 @@ class Solution {
             List<Integer> row = new ArrayList();
 
             for (int j = 0; j < colNum; j++) {
-                int temp = (shift - j) % colNum == 0 ? (shift - j) / colNum - 1 : (shift - j) / colNum;
-                int rowIndex = (shift - j) > 0 ? i - 1 - temp : i;
+                int temp = (shift - j) % colNum == 0 ? (shift - j) / colNum - 1
+                                                     : (shift - j) / colNum;
+                int rowIndex = (shift - j) > 0 ? i - 1 - temp
+                                               : i;
                 int colIndex = j - shift % colNum;
 
-                rowIndex = rowIndex < 0 ? rowIndex + rowNum : rowIndex;
-                colIndex = colIndex < 0 ? colIndex + colNum : colIndex;
+                rowIndex = rowIndex < 0 ? rowIndex + rowNum
+                                        : rowIndex;
+                colIndex = colIndex < 0 ? colIndex + colNum
+                                        : colIndex;
                 row.add(grid[rowIndex][colIndex]);
             }
 

@@ -35,14 +35,14 @@ class Solution {
             head = head.next;
         }
 
-
         // combine
         if (afterTail != null) {
             afterTail.next = null;
         }
 
         if (beforeTail != null) {
-            beforeTail.next = afterTail == null ? null : dummy2.next;
+            beforeTail.next = afterTail == null ? null
+                                                : dummy2.next;
             return dummy1.next;
         } else {
             return dummy2.next;

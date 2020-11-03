@@ -17,7 +17,8 @@ class Solution {
                     need += 1;
                 }
 
-                dp[i][j] = need <= 0 ? 1 : need;
+                dp[i][j] = need <= 0 ? 1
+                                     : need;
             }
         }
 

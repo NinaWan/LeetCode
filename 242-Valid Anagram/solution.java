@@ -1,7 +1,9 @@
 public class Solution {
     public boolean isAnagram(String s, String t) {
-        if (s.length() != t.length()) return false;
-        if (s.length() == 0 && t.length() == 0) return true;
+        if (s.length() != t.length())
+            return false;
+        if (s.length() == 0 && t.length() == 0)
+            return true;
         Map sMap = new HashMap<Character, Integer>();
         Map tMap = new HashMap<Character, Integer>();
         for (int i = 0; i < s.length(); i++) {
@@ -20,7 +22,8 @@ public class Solution {
         Iterator sIterator = sMap.keySet().iterator();
         while (sIterator.hasNext()) {
             char key = (char) sIterator.next();
-            if (!tMap.containsKey(key)) return false;
+            if (!tMap.containsKey(key))
+                return false;
             if ((int) sMap.get(key) != (int) tMap.get(key)) {
                 return false;
             }

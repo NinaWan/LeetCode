@@ -1,6 +1,7 @@
 public class Solution {
     public void rotate(int[] nums, int k) {
-        if (k == 0) return;
+        if (k == 0)
+            return;
         int[] temp = new int[nums.length];
         int step = k % nums.length;
         int index = -1;

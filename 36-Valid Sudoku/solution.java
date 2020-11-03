@@ -6,12 +6,14 @@ public class Solution {
             for (int j = 0; j < 9; j++) {
                 // check row
                 if (board[i][j] != '.') {
-                    if (rowSet.contains(board[i][j]) || !checkRank(board[i][j])) return false;
+                    if (rowSet.contains(board[i][j]) || !checkRank(board[i][j]))
+                        return false;
                     rowSet.add(board[i][j]);
                 }
                 // check column
                 if (board[j][i] != '.') {
-                    if (columnSet.contains(board[j][i]) || !checkRank(board[j][i])) return false;
+                    if (columnSet.contains(board[j][i]) || !checkRank(board[j][i]))
+                        return false;
                     columnSet.add(board[j][i]);
                 }
 
@@ -20,8 +22,10 @@ public class Solution {
                     Set cubeSet = new HashSet();
                     for (int m = i; m < i + 3; m++) {
                         for (int n = j; n < j + 3; n++) {
-                            if (board[m][n] == '.') continue;
-                            if (cubeSet.contains(board[m][n]) || !checkRank(board[m][n])) return false;
+                            if (board[m][n] == '.')
+                                continue;
+                            if (cubeSet.contains(board[m][n]) || !checkRank(board[m][n]))
+                                return false;
                             cubeSet.add(board[m][n]);
                         }
                     }
@@ -32,7 +36,8 @@ public class Solution {
     }
 
     private boolean checkRank(char cell) {
-        if ('0' < cell && cell <= '9') return true;
+        if ('0' < cell && cell <= '9')
+            return true;
         return false;
     }
 }

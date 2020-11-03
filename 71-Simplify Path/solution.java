@@ -16,6 +16,7 @@ class Solution {
             }
         }
 
-        return ans.isEmpty() ? "/" : ans;
+        return ans.isEmpty() ? "/"
+                             : ans;
     }
 }

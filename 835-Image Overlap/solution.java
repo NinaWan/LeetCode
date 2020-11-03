@@ -7,11 +7,13 @@ class Solution {
         for (int i = 0; i < A.length; i++) {
             for (int j = 0; j < A.length; j++) {
                 if (A[i][j] == 1) {
-                    aOnes.add(new int[]{i, j});
+                    aOnes.add(new int[] {i,
+                                         j});
                 }
 
                 if (B[i][j] == 1) {
-                    bOnes.add(new int[]{i, j});
+                    bOnes.add(new int[] {i,
+                                         j});
                 }
             }
         }

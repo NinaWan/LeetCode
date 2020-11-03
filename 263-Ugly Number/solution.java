@@ -20,6 +20,7 @@ class Solution {
             }
         }
 
-        return num == 1 ? true : false;
+        return num == 1 ? true
+                        : false;
     }
 }

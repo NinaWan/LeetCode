@@ -8,7 +8,8 @@ class MyCalendar {
     public boolean book(int start, int end) {
         Map.Entry<Integer, Integer> pre = bookings.floorEntry(start);
         Map.Entry<Integer, Integer> next = bookings.ceilingEntry(start);
-        if (bookings.isEmpty() || (pre == null && end <= next.getKey()) || (next == null && start >= pre.getValue()) || (pre != null && next != null && start >= pre.getValue() && end <= next.getKey())) {
+        if (bookings.isEmpty() || (pre == null && end <= next.getKey()) || (next == null && start >= pre.getValue()) ||
+                (pre != null && next != null && start >= pre.getValue() && end <= next.getKey())) {
             bookings.put(start, end);
             return true;
         }

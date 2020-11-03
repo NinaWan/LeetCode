@@ -13,7 +13,8 @@ public class Solution {
         } catch (Exception e) {
             return 0;
         }
-        if (x < 0) return -result;
+        if (x < 0)
+            return -result;
         return result;
     }
 }

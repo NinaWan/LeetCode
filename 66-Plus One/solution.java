@@ -1,7 +1,7 @@
 class Solution {
     public int[] plusOne(int[] digits) {
         if (digits == null || digits.length == 0) {
-            return new int[]{1};
+            return new int[] {1};
         }
 
         int carryOver = 1;
