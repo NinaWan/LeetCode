@@ -20,7 +20,8 @@ class Solution {
                 if (l1 != 1) {
                     String d1l = num1.substring(0, x);
                     String d1r = num1.substring(x, l1);
-                    if ((x > 1 && Integer.valueOf(d1l.substring(0, 1)) == 0) || (x <= l1 - 1 && Integer.valueOf(d1r.substring(d1r.length() - 1, d1r.length())) == 0)) {
+                    if ((x > 1 && Integer.valueOf(d1l.substring(0, 1)) == 0) ||
+                            (x <= l1 - 1 && Integer.valueOf(d1r.substring(d1r.length() - 1, d1r.length())) == 0)) {
                         continue;
                     }
 
@@ -35,7 +36,8 @@ class Solution {
                     if (l2 != 1) {
                         String d2l = num2.substring(0, y);
                         String d2r = num2.substring(y, l2);
-                        if ((y > 1 && Integer.valueOf(d2l.substring(0, 1)) == 0) || (y <= l2 - 1 && Integer.valueOf(d2r.substring(d2r.length() - 1, d2r.length())) == 0)) {
+                        if ((y > 1 && Integer.valueOf(d2l.substring(0, 1)) == 0) ||
+                                (y <= l2 - 1 && Integer.valueOf(d2r.substring(d2r.length() - 1, d2r.length())) == 0)) {
                             continue;
                         }
 

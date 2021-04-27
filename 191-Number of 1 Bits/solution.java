@@ -9,7 +9,8 @@ public class Solution {
             quotient = n;
         }
         while (quotient != 0) {
-            if (quotient % 2 == 1) count++;
+            if (quotient % 2 == 1)
+                count++;
             quotient = quotient / 2;
         }
         return count;

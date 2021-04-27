@@ -4,7 +4,8 @@ class Solution {
         Map<Integer, Pair<String, String>> map = new TreeMap();
 
         for (int i = 0; i < indexes.length; i++) {
-            map.put(indexes[i], new Pair(sources[i], targets[i]));
+            map.put(indexes[i], new Pair(sources[i],
+                                         targets[i]));
         }
 
         int diff = 0;

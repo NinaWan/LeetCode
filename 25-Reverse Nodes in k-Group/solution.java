@@ -37,7 +37,8 @@ class Solution {
             preTail = currTail;
             currTail = currP;
             preP = currP;
-            currP = preP == null ? null : preP.next;
+            currP = preP == null ? null
+                                 : preP.next;
         }
 
         return dummy.next;

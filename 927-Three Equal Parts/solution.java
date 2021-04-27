@@ -6,12 +6,10 @@ class Solution {
         }
 
         if (numOfOne == 0) {// all zeros, return any
-            return new int[] {0,
-                              2};
+            return new int[] {0, 2};
         }
         if (numOfOne % 3 != 0) {
-            return new int[] {-1,
-                              -1};
+            return new int[] {-1, -1};
         }
 
         int k = numOfOne / 3, count = 0;
@@ -35,11 +33,9 @@ class Solution {
         }
 
         if (third == arr.length) {
-            return new int[] {first - 1,
-                              second};
+            return new int[] {first - 1, second};
         }
 
-        return new int[] {-1,
-                          -1};
+        return new int[] {-1, -1};
     }
 }

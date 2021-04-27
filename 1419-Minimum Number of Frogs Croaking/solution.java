@@ -31,6 +31,7 @@ class Solution {
             result = Math.max(result, frogs);
         }
 
-        return frogs == 0 ? result : -1;
+        return frogs == 0 ? result
+                          : -1;
     }
 }

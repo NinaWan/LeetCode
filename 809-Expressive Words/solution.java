@@ -15,7 +15,7 @@ class Solution {
                 continue;
             }
 
-            for (int i = 0, j = 0; i < n; ) {
+            for (int i = 0, j = 0; i < n;) {
                 char c = S.charAt(i);
                 int target = 0;
                 int source = 0;

@@ -16,7 +16,8 @@ class Solution {
             }
             List<Integer> list = idxes.get(c);
             int p = Collections.binarySearch(list, pre);
-            p = p < 0 ? -(p + 1) : p;
+            p = p < 0 ? -(p + 1)
+                      : p;
             if (p == list.size()) {
                 return false;
             }

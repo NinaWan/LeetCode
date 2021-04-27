@@ -6,7 +6,8 @@ class Solution {
         int count = 0;
 
         for (int i = 0; i < nums.length; i++) {
-            count += nums[i] == 1 ? 1 : -1;
+            count += nums[i] == 1 ? 1
+                                  : -1;
             if (map.containsKey(count)) {
                 ans = Math.max(ans, i - map.get(count));
             } else {

@@ -10,8 +10,7 @@ class RLEIterator {
                 continue;
             }
             totalSum += A[i];
-            this.list.add(new long[] {A[i + 1],
-                                      totalSum});
+            this.list.add(new long[] {A[i + 1], totalSum});
         }
     }
 

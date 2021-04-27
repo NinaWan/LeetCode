@@ -14,7 +14,8 @@ class Solution {
             }
 
             // Go through one path
-            while (isNotSelfCycle(slow, nums) && isNotSelfCycle(fast, nums) && isSameSign(nums[slow], nums[getNextIdx(slow, nums)]) && isSameSign(nums[fast], nums[getNextIdx(fast, nums)])) {// while same direction
+            while (isNotSelfCycle(slow, nums) && isNotSelfCycle(fast, nums) && isSameSign(nums[slow], nums[getNextIdx(slow, nums)]) &&
+                    isSameSign(nums[fast], nums[getNextIdx(fast, nums)])) {// while same direction
                 if (slow == fast) {// cycle found
                     return true;
                 }
@@ -37,7 +38,8 @@ class Solution {
     }
 
     private int getNextIdx(int currIdx, int[] nums) {
-        return currIdx + nums[currIdx] >= 0 ? (currIdx + nums[currIdx]) % nums.length : nums.length + (currIdx + nums[currIdx]) % nums.length;
+        return currIdx + nums[currIdx] >= 0 ? (currIdx + nums[currIdx]) % nums.length
+                                            : nums.length + (currIdx + nums[currIdx]) % nums.length;
     }
 
     private boolean isNotSelfCycle(int currIdx, int[] nums) {

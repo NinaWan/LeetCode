@@ -21,6 +21,7 @@ class Solution {
             }
         }
 
-        return odd == 0 ? ans : ans + 1;
+        return odd == 0 ? ans
+                        : ans + 1;
     }
 }

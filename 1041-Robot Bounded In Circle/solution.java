@@ -1,7 +1,7 @@
 class Solution {
     public boolean isRobotBounded(String instructions) {
-        int[] curr = new int[]{0, 0};
-        int[][] dirs = new int[][]{{0, 1}, {1, 0}, {0, -1}, {-1, 0}};//up, right, down, left
+        int[] curr = new int[] {0, 0};
+        int[][] dirs = new int[][] {{0, 1}, {1, 0}, {0, -1}, {-1, 0}};// up, right, down, left
         int dir = 0;
 
         for (char instruction : instructions.toCharArray()) {

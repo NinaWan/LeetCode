@@ -23,7 +23,8 @@ class Solution {
                 int currSum = 0;
 
                 for (int r = 0; r < row; r++) {
-                    currSum += rowSum[r][right] - (left > 0 ? rowSum[r][left - 1] : 0);
+                    currSum += rowSum[r][right] - (left > 0 ? rowSum[r][left - 1]
+                                                            : 0);
                     result += sumCount.getOrDefault(currSum - target, 0);
                     sumCount.put(currSum, sumCount.getOrDefault(currSum, 0) + 1);
                 }

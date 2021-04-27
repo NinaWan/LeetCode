@@ -19,7 +19,7 @@ class Solution {
         String[] fractions = expression.split("\\+|-");
         for (int i = 0; i < fractions.length; i++) {
             String[] temp = fractions[i].split("/");
-            int[] fraction = new int[]{Integer.valueOf(temp[0]), Integer.valueOf(temp[1])};
+            int[] fraction = new int[] {Integer.valueOf(temp[0]), Integer.valueOf(temp[1])};
             if (denominator != fraction[1]) {
                 numerator *= fraction[1];
                 fraction[0] *= denominator;

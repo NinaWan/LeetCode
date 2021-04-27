@@ -6,7 +6,8 @@ class Solution {
         for (int x = 0; x < N; x++) {
             int rowMax = 0, colMax = 0;
             for (int y = 0; y < N; y++) {
-                ans += grid[x][y] == 0 ? 0 : 1;// xy
+                ans += grid[x][y] == 0 ? 0
+                                       : 1;// xy
                 rowMax = Math.max(rowMax, grid[x][y]);// xz
                 colMax = Math.max(colMax, grid[y][x]);// yz
             }

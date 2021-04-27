@@ -5,7 +5,7 @@ class Solution {
         int b = 0;
         char c = s.charAt(0);
 
-        for (int i = 0; i < s.length(); ) {
+        for (int i = 0; i < s.length();) {
             while (i < s.length() && s.charAt(i) == c) {
                 a++;
                 i++;

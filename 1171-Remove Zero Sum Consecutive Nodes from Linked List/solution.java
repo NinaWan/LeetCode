@@ -25,7 +25,8 @@ class Solution {
         }
 
         ListNode dummy = new ListNode(0);
-        dummy.next = list.isEmpty() ? null : list.get(0);
+        dummy.next = list.isEmpty() ? null
+                                    : list.get(0);
         ListNode tail = dummy;
         for (int i = 0; i < list.size(); i++) {
             int sum = list.get(i).val;

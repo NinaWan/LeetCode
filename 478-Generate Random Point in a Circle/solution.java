@@ -3,7 +3,9 @@ class Solution {
     double x_center;
     double y_center;
 
-    public Solution(double radius, double x_center, double y_center) {
+    public Solution(double radius,
+                    double x_center,
+                    double y_center) {
         this.radius = radius;
         this.x_center = x_center;
         this.y_center = y_center;
@@ -16,7 +18,7 @@ class Solution {
         double x = x_center + length * Math.cos(degree);
         double y = y_center + length * Math.sin(degree);
 
-        return new double[]{x, y};
+        return new double[] {x, y};
     }
 }
 

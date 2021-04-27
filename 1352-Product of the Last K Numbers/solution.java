@@ -18,7 +18,8 @@ class ProductOfNumbers {
     public int getProduct(int k) {
         int s = preProduct.size();
 
-        return k < s ? preProduct.get(s - 1) / preProduct.get(s - k - 1) : 0;
+        return k < s ? preProduct.get(s - 1) / preProduct.get(s - k - 1)
+                     : 0;
     }
 }
 

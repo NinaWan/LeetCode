@@ -20,7 +20,8 @@ public class NodeParams {
 
     ;
 
-    NodeParams(boolean isBalanced, int depth) {
+    NodeParams(boolean isBalanced,
+               int depth) {
         this.isBalanced = isBalanced;
         this.depth = depth;
     }
@@ -40,7 +41,8 @@ class Solution {
 
     private NodeParams calculateParams(TreeNode node) {
         if (null == node) {
-            return new NodeParams(true, 0);
+            return new NodeParams(true,
+                                  0);
         }
 
         NodeParams result = new NodeParams();

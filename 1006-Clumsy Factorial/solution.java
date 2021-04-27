@@ -11,6 +11,7 @@ class Solution {
             N -= 4;
         }
 
-        return N > 0 ? ans - N : ans;
+        return N > 0 ? ans - N
+                     : ans;
     }
 }

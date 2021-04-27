@@ -16,7 +16,8 @@ class Solution {
         // North
         for (int i = r - 1; i >= 0; i--) {
             if (board[i][c] == 'p' || board[i][c] == 'B') {
-                result += board[i][c] == 'p' ? 1 : 0;
+                result += board[i][c] == 'p' ? 1
+                                             : 0;
                 break;
             }
         }
@@ -24,7 +25,8 @@ class Solution {
         // South
         for (int i = r + 1; i < 8; i++) {
             if (board[i][c] == 'p' || board[i][c] == 'B') {
-                result += board[i][c] == 'p' ? 1 : 0;
+                result += board[i][c] == 'p' ? 1
+                                             : 0;
                 break;
             }
         }
@@ -32,7 +34,8 @@ class Solution {
         // West
         for (int j = c - 1; j >= 0; j--) {
             if (board[r][j] == 'p' || board[r][j] == 'B') {
-                result += board[r][j] == 'p' ? 1 : 0;
+                result += board[r][j] == 'p' ? 1
+                                             : 0;
                 break;
             }
         }
@@ -40,7 +43,8 @@ class Solution {
         // East
         for (int j = c + 1; j < 8; j++) {
             if (board[r][j] == 'p' || board[r][j] == 'B') {
-                result += board[r][j] == 'p' ? 1 : 0;
+                result += board[r][j] == 'p' ? 1
+                                             : 0;
                 break;
             }
         }

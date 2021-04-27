@@ -1,30 +1,6 @@
 class Solution {
     public int[] waysToFillArray(int[][] queries) {
-        int[] primes = {2,
-                        3,
-                        5,
-                        7,
-                        11,
-                        13,
-                        17,
-                        19,
-                        23,
-                        29,
-                        31,
-                        37,
-                        41,
-                        43,
-                        47,
-                        53,
-                        59,
-                        61,
-                        67,
-                        71,
-                        73,
-                        79,
-                        83,
-                        89,
-                        97};
+        int[] primes = {2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97};
         int mod = (int) 1e9 + 7;
         int[] ans = new int[queries.length];
         Arrays.fill(ans, 1);

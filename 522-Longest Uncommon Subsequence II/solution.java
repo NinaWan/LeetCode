@@ -49,6 +49,7 @@ class Solution {
             }
         }
 
-        return i == a.length() ? true : false;
+        return i == a.length() ? true
+                               : false;
     }
 }

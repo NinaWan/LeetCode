@@ -8,6 +8,7 @@ class Solution {
             min = Math.min(min, sum);
         }
 
-        return min >= 1 ? 1 : 1 - min;
+        return min >= 1 ? 1
+                        : 1 - min;
     }
 }

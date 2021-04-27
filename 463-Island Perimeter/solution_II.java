@@ -7,11 +7,11 @@ class Solution {
                 if (grid[i][j] == 1) {
                     ans += 4;
 
-                    if (i > 0 && grid[i - 1][j] == 1) {//check up
+                    if (i > 0 && grid[i - 1][j] == 1) {// check up
                         ans -= 2;
                     }
 
-                    if (j > 0 && grid[i][j - 1] == 1) {//check left
+                    if (j > 0 && grid[i][j - 1] == 1) {// check left
                         ans -= 2;
                     }
                 }

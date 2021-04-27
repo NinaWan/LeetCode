@@ -20,7 +20,6 @@ class Solution {
             result = stack.pop() + result;
         }
 
-
         return result;
     }
 }

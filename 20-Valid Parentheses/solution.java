@@ -9,11 +9,13 @@ class Solution {
         }
 
         Stack<Character> stack = new Stack();
-        Map<Character, Character> map = new HashMap() {{
-            put('}', '{');
-            put(')', '(');
-            put(']', '[');
-        }};
+        Map<Character, Character> map = new HashMap() {
+            {
+                put('}', '{');
+                put(')', '(');
+                put(']', '[');
+            }
+        };
         for (char c : s.toCharArray()) {
             if (stack.isEmpty() || !map.containsKey(c) || !map.get(c).equals(stack.peek())) {
                 stack.push(c);

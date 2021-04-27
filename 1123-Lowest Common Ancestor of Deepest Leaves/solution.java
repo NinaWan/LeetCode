@@ -38,7 +38,6 @@ class Solution {
             leftMaxDepth = calculateMaxDepth(node.left, currentDepth + 1);
         }
 
-
         if (null != node.right) {
             rightMaxDepth = calculateMaxDepth(node.right, currentDepth + 1);
         }

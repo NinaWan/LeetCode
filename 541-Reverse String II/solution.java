@@ -1,6 +1,7 @@
 public class Solution {
     public String reverseStr(String s, int k) {
-        if (null == s || k <= 0) return s;
+        if (null == s || k <= 0)
+            return s;
 
         char[] result = s.toCharArray();
         for (int i = 0; i < s.length(); i += 2 * k) {

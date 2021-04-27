@@ -16,7 +16,8 @@ class TimeMap {
 
     public String get(String key, int timestamp) {
         Map.Entry<Integer, String> entry = timeMap.get(key).floorEntry(timestamp);
-        return entry == null ? "" : entry.getValue();
+        return entry == null ? ""
+                             : entry.getValue();
     }
 }
 

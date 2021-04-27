@@ -5,10 +5,12 @@ class Solution {
         }
 
         int i = 0;
-        for (; i < bits.length - 1; ) {
-            i += bits[i] == 1 ? 2 : 1;
+        for (; i < bits.length - 1;) {
+            i += bits[i] == 1 ? 2
+                              : 1;
         }
 
-        return i == bits.length - 1 ? true : false;
+        return i == bits.length - 1 ? true
+                                    : false;
     }
 }

@@ -28,7 +28,8 @@ class Solution {
 
         maxPro = 0;
         for (int i = 0; i < prices.length; i++) {
-            maxPro = Math.max(maxPro, i == prices.length - 1 ? leftMax[i] : leftMax[i] + rightMax[i + 1]);
+            maxPro = Math.max(maxPro, i == prices.length - 1 ? leftMax[i]
+                                                             : leftMax[i] + rightMax[i + 1]);
         }
 
         return maxPro;

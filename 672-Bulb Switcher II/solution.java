@@ -9,7 +9,8 @@ class Solution {
         }
 
         if (n == 2) {
-            return m == 1 ? 3 : 4;
+            return m == 1 ? 3
+                          : 4;
         }
 
         if (m == 1) {

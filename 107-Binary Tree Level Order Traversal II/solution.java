@@ -9,7 +9,8 @@
  */
 public class Solution {
     public List<List<Integer>> levelOrderBottom(TreeNode root) {
-        if (root == null) return new ArrayList<List<Integer>>();
+        if (root == null)
+            return new ArrayList<List<Integer>>();
 
         List<TreeNode> rootList = new ArrayList<TreeNode>();
         rootList.add(root);
@@ -42,7 +43,8 @@ public class Solution {
 
     private boolean isLeafLevel(List<TreeNode> nodes) {
         for (TreeNode node : nodes) {
-            if (node.left != null || node.right != null) return false;
+            if (node.left != null || node.right != null)
+                return false;
         }
         return true;
     }

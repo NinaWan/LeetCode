@@ -1,9 +1,7 @@
 class Solution {
     public List<String> invalidTransactions(String[] transactions) {
         List<String> result = new ArrayList();
-        List<String[]> transList = Arrays.stream(transactions)
-                .map(s -> s.split(","))
-                .collect(Collectors.toList());
+        List<String[]> transList = Arrays.stream(transactions).map(s -> s.split(",")).collect(Collectors.toList());
         int[] added = new int[transactions.length];
 
         for (int i = 0; i < transList.size(); i++) {

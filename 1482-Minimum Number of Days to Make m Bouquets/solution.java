@@ -22,7 +22,8 @@ class Solution {
             }
         }
 
-        return hasEnoughBouquets(bloomDay, m, k, start) ? start : -1;
+        return hasEnoughBouquets(bloomDay, m, k, start) ? start
+                                                        : -1;
     }
 
     private boolean hasEnoughBouquets(int[] bloomDay, int m, int k, int days) {

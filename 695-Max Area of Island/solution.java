@@ -13,7 +13,7 @@ class Solution {
             for (int j = 0; j < col; j++) {
                 if (grid[i][j] == 1) {
                     // bfs
-                    queue.offer(new int[]{i, j});
+                    queue.offer(new int[] {i, j});
                     int currArea = 0;
                     while (!queue.isEmpty()) {
                         int[] currP = queue.poll();
@@ -23,10 +23,10 @@ class Solution {
                         if (r >= 0 && r < row && c >= 0 && c < col && grid[r][c] == 1) {
                             grid[r][c] = 0;
                             currArea++;
-                            queue.offer(new int[]{r - 1, c});//up
-                            queue.offer(new int[]{r + 1, c});//down
-                            queue.offer(new int[]{r, c - 1});//left
-                            queue.offer(new int[]{r, c + 1});//right
+                            queue.offer(new int[] {r - 1, c});// up
+                            queue.offer(new int[] {r + 1, c});// down
+                            queue.offer(new int[] {r, c - 1});// left
+                            queue.offer(new int[] {r, c + 1});// right
                         }
                     }
 

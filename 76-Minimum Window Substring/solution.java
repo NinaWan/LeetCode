@@ -4,7 +4,7 @@ class Solution {
             return "";
         }
 
-        int[] ans = {-1, 0, 0};//{window length, left index, right index}
+        int[] ans = {-1, 0, 0};// {window length, left index, right index}
         Map<Character, Integer> freqT = new HashMap();
         for (char c : t.toCharArray()) {
             freqT.put(c, freqT.getOrDefault(c, 0) + 1);
@@ -38,6 +38,7 @@ class Solution {
             right++;
         }
 
-        return ans[0] == -1 ? "" : s.substring(ans[1], ans[2] + 1);
+        return ans[0] == -1 ? ""
+                            : s.substring(ans[1], ans[2] + 1);
     }
 }

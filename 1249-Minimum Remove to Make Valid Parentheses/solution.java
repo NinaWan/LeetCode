@@ -6,8 +6,10 @@ class Solution {
         Stack<Character> stack = new Stack();
 
         for (char c : s.toCharArray()) {
-            opening += c == '(' ? 1 : 0;
-            closing += c == ')' ? 1 : 0;
+            opening += c == '(' ? 1
+                                : 0;
+            closing += c == ')' ? 1
+                                : 0;
 
             if (opening >= closing) {
                 stack.push(c);
@@ -20,8 +22,10 @@ class Solution {
         closing = 0;
         while (!stack.isEmpty()) {
             Character c = stack.pop();
-            opening += c == '(' ? 1 : 0;
-            closing += c == ')' ? 1 : 0;
+            opening += c == '(' ? 1
+                                : 0;
+            closing += c == ')' ? 1
+                                : 0;
             if (closing >= opening) {
                 result = c + result;
             } else {

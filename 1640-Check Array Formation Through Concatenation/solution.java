@@ -5,7 +5,7 @@ class Solution {
             map.put(pieces[i][0], i);
         }
 
-        for (int i = 0; i < arr.length; ) {
+        for (int i = 0; i < arr.length;) {
             if (map.containsKey(arr[i])) {
                 int[] curr = pieces[map.get(arr[i])];
                 for (int j = 0; j < curr.length; j++) {

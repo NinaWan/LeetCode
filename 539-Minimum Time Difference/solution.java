@@ -17,7 +17,8 @@ class Solution {
             int diff = Math.min(1440 - currM + preM, currM - preM);
 
             min = Math.min(min, diff);
-            pre = i == 0 ? timePoints.get(0).split(":") : curr;
+            pre = i == 0 ? timePoints.get(0).split(":")
+                         : curr;
         }
 
         return min;

@@ -54,7 +54,8 @@ class Solution {
                 for (int j = 0; j < eachSpace; j++) {
                     extraSpace += " ";
                 }
-                extraSpace += i + 1 > largerSpaceCount ? "" : " ";
+                extraSpace += i + 1 > largerSpaceCount ? ""
+                                                       : " ";
 
                 words[i] += extraSpace;
             }

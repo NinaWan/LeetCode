@@ -2,7 +2,7 @@ class Solution {
     public int[][] intervalIntersection(int[][] A, int[][] B) {
         List<int[]> intersections = new ArrayList();
 
-        for (int i = 0, j = 0; i < A.length && j < B.length; ) {
+        for (int i = 0, j = 0; i < A.length && j < B.length;) {
             int[] inter = new int[2];
 
             if (A[i][1] < B[j][0]) {

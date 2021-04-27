@@ -18,7 +18,8 @@ class Solution {
             }
         }
 
-        return isValid(start, set, m) ? start : start - 1;
+        return isValid(start, set, m) ? start
+                                      : start - 1;
     }
 
     private boolean isValid(int force, TreeSet<Integer> position, int m) {

@@ -15,7 +15,8 @@ class Solution {
         // return mergeKLists(lists, 0, lists.length-1);
 
         // min heap
-        Queue<ListNode> pq = new PriorityQueue(lists.length, (Comparator<ListNode>) (node1, node2) -> node1.val - node2.val);
+        Queue<ListNode> pq = new PriorityQueue(lists.length,
+                                               (Comparator<ListNode>) (node1, node2) -> node1.val - node2.val);
         for (int i = 0; i < lists.length; i++) {
             if (lists[i] != null) {
                 pq.add(lists[i]);

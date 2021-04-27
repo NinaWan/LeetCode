@@ -7,7 +7,7 @@ class Solution {
             orderedIndexes[i] = i;
         }
 
-        Arrays.sort(orderedIndexes, (index1, index2) -> A[index2] - A[index1]);//order by descending
+        Arrays.sort(orderedIndexes, (index1, index2) -> A[index2] - A[index1]);// order by descending
         int disorderedCount = A.length;
 
         for (int index : orderedIndexes) {

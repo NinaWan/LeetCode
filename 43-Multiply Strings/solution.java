@@ -9,7 +9,8 @@ class Solution {
         }
 
         if (num1.equals("1") || num2.equals("1")) {
-            return num1.equals("1") ? num2 : num1;
+            return num1.equals("1") ? num2
+                                    : num1;
         }
 
         String result = "";
@@ -19,7 +20,7 @@ class Solution {
             int product = 1;
             String mulResult = "";
 
-            for (int j = num2.length() - 1; j >= 0; j--) {//single Multiplication
+            for (int j = num2.length() - 1; j >= 0; j--) {// single Multiplication
                 product = Character.getNumericValue(num1.charAt(i)) * Character.getNumericValue(num2.charAt(j)) + carryOver;
                 mulResult = String.valueOf(product % 10) + mulResult;
                 carryOver = product / 10;
@@ -41,8 +42,10 @@ class Solution {
             while (p1 >= 0 || p2 >= 0) {
                 int sum = carryOver;
 
-                sum += p1 >= 0 ? Character.getNumericValue(result.charAt(p1)) : 0;
-                sum += p2 >= 0 ? Character.getNumericValue(mulResult.charAt(p2)) : 0;
+                sum += p1 >= 0 ? Character.getNumericValue(result.charAt(p1))
+                               : 0;
+                sum += p2 >= 0 ? Character.getNumericValue(mulResult.charAt(p2))
+                               : 0;
 
                 sumResult = String.valueOf(sum % 10) + sumResult;
                 carryOver = sum / 10;

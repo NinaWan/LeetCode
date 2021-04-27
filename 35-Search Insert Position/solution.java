@@ -34,6 +34,7 @@ class Solution {
             return end + 1;
         }
 
-        return nums[start] == target ? start : end;
+        return nums[start] == target ? start
+                                     : end;
     }
 }

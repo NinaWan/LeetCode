@@ -12,6 +12,7 @@ class Solution {
             }
         }
 
-        return desc != 0 && asc != 0 ? false : true;
+        return desc != 0 && asc != 0 ? false
+                                     : true;
     }
 }

@@ -34,7 +34,8 @@ class Solution {
         }
 
         for (boolean e : isPrime) {
-            ans += e ? 1 : 0;
+            ans += e ? 1
+                     : 0;
         }
 
         return ans;

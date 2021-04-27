@@ -6,6 +6,7 @@ class Solution {
             result += "a";
         }
 
-        return n % 2 == 0 ? result.substring(0, n - 1) + "b" : result;
+        return n % 2 == 0 ? result.substring(0, n - 1) + "b"
+                          : result;
     }
 }

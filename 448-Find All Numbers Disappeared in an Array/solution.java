@@ -18,7 +18,8 @@ public class Solution {
         result.clear();
 
         for (int num : nums) {
-            if (num != 0) result.add(num);
+            if (num != 0)
+                result.add(num);
         }
 
         return result;

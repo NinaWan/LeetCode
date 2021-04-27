@@ -6,7 +6,8 @@ class Solution {
 
         for (char c : S.toCharArray()) {
             freq.put(c, freq.getOrDefault(c, 0) + 1);
-            int th = n % 2 == 0 ? n / 2 : n / 2 + 1;
+            int th = n % 2 == 0 ? n / 2
+                                : n / 2 + 1;
             if (freq.get(c) > th) {
                 return "";
             }

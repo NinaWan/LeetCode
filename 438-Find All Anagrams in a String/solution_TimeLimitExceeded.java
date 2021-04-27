@@ -1,7 +1,8 @@
 public class Solution {
     public List<Integer> findAnagrams(String s, String p) {
         List<Integer> result = new ArrayList<Integer>();
-        if (s.length() == 0 || s.length() < p.length()) return result;
+        if (s.length() == 0 || s.length() < p.length())
+            return result;
         if (s.equals(p)) {
             result.add(0);
             return result;
@@ -23,12 +24,14 @@ public class Solution {
             sMap.put(s.charAt(i), sMap.getOrDefault(s.charAt(i), 0) + 1);
             pMap.put(p.charAt(i), pMap.getOrDefault(p.charAt(i), 0) + 1);
         }
-        if (sMap.size() != pMap.size()) return false;
+        if (sMap.size() != pMap.size())
+            return false;
         Iterator<Map.Entry<Character, Integer>> iterP = pMap.entrySet().iterator();
         while (iterP.hasNext()) {
             Map.Entry<Character, Integer> entryP = iterP.next();
             int pValue = entryP.getValue();
-            if (pValue != (int) sMap.getOrDefault(entryP.getKey(), -1)) return false;
+            if (pValue != (int) sMap.getOrDefault(entryP.getKey(), -1))
+                return false;
         }
         return true;
     }

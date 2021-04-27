@@ -13,6 +13,7 @@ class Solution {
             }
         }
 
-        return second == -1 || nums[first] >= nums[second] * 2 ? first : -1;
+        return second == -1 || nums[first] >= nums[second] * 2 ? first
+                                                               : -1;
     }
 }

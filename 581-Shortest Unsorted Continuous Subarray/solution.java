@@ -46,6 +46,7 @@ class Solution {
             }
         }
 
-        return right <= left ? 0 : right - left + 1;
+        return right <= left ? 0
+                             : right - left + 1;
     }
 }

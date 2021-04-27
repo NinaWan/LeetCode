@@ -17,7 +17,8 @@ class Solution {
         }
 
         if (idx == -1) {
-            idx = Math.abs(arr[left] - x) <= Math.abs(arr[right] - x) ? left : right;
+            idx = Math.abs(arr[left] - x) <= Math.abs(arr[right] - x) ? left
+                                                                      : right;
         }
 
         ans.add(arr[idx]);

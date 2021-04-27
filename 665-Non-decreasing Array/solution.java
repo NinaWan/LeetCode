@@ -15,6 +15,7 @@ class Solution {
             }
         }
 
-        return fallingPoint <= 0 || fallingPoint >= nums.length - 2 || fallingPoint == -1 || nums[fallingPoint + 1] >= nums[fallingPoint - 1] || nums[fallingPoint] <= nums[fallingPoint + 2];
+        return fallingPoint <= 0 || fallingPoint >= nums.length - 2 || fallingPoint == -1 || nums[fallingPoint + 1] >= nums[fallingPoint - 1] ||
+                nums[fallingPoint] <= nums[fallingPoint + 2];
     }
 }

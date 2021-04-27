@@ -9,9 +9,11 @@ class Solution {
         result.add(Arrays.asList(1));
 
         for (int i = 1; i < numRows; i++) {
-            List<Integer> row = new ArrayList() {{
-                add(1);
-            }};
+            List<Integer> row = new ArrayList() {
+                {
+                    add(1);
+                }
+            };
             for (int j = 1; j <= i; j++) {
                 if (j == i) {
                     row.add(1);

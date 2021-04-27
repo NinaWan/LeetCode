@@ -21,7 +21,8 @@ class Solution {
                 } else {
                     result += 1;
                 }
-            } else if ((!cols.contains(2) && !cols.contains(3) && !cols.contains(4) && !cols.contains(5)) || (!cols.contains(6) && !cols.contains(7) && !cols.contains(8) && !cols.contains(9))) {
+            } else if ((!cols.contains(2) && !cols.contains(3) && !cols.contains(4) && !cols.contains(5)) ||
+                    (!cols.contains(6) && !cols.contains(7) && !cols.contains(8) && !cols.contains(9))) {
                 result += 1;
             }
         }

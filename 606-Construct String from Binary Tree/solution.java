@@ -23,8 +23,10 @@ class Solution {
             return String.valueOf(t.val);
         }
 
-        String rString = t.right == null ? "" : tree2str(t.right);
-        String lString = t.left == null ? "" : tree2str(t.left);
+        String rString = t.right == null ? ""
+                                         : tree2str(t.right);
+        String lString = t.left == null ? ""
+                                        : tree2str(t.left);
 
         if (t.left == null && t.right != null) {
             return t.val + "()" + "(" + rString + ")";

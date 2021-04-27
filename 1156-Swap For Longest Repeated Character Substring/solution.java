@@ -22,7 +22,7 @@ class Solution {
 
             count = count1;
 
-            if (count1 < freq[c - 'a']) {//if still has same character left
+            if (count1 < freq[c - 'a']) {// if still has same character left
                 int p = right + 1;
                 while (p < text.length() && text.charAt(p) != c) {
                     p++;

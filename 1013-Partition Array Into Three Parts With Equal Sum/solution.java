@@ -24,7 +24,8 @@ class Solution {
                     i++;
                 }
 
-                return subSum == sum / 3 ? true : false;
+                return subSum == sum / 3 ? true
+                                         : false;
             }
         }
 

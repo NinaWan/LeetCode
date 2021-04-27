@@ -1,7 +1,8 @@
 class TopVotedCandidate {
     TreeMap<Integer, Integer> voteMap;
 
-    public TopVotedCandidate(int[] persons, int[] times) {
+    public TopVotedCandidate(int[] persons,
+                             int[] times) {
         this.voteMap = new TreeMap();
         int mostVoted = persons[0];
         this.voteMap.put(times[0], mostVoted);

@@ -24,7 +24,8 @@ public class Solution {
     }
 
     private void inOrderTraversal(List<Integer> inOrderList, TreeNode root) {
-        if (root == null) return;
+        if (root == null)
+            return;
         inOrderTraversal(inOrderList, root.left);
         inOrderList.add(root.val);
         inOrderTraversal(inOrderList, root.right);

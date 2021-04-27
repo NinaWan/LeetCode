@@ -17,6 +17,7 @@ class Solution {
             }
         }
 
-        return c1 * c2 == 0 ? true : false;
+        return c1 * c2 == 0 ? true
+                            : false;
     }
 }

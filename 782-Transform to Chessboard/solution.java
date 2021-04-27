@@ -25,8 +25,10 @@ class Solution {
                     return false;
                 }
 
-                rowDiff += board[i][j] == 1 ? 1 : -1;
-                colDiff += board[j][i] == 1 ? 1 : -1;
+                rowDiff += board[i][j] == 1 ? 1
+                                            : -1;
+                colDiff += board[j][i] == 1 ? 1
+                                            : -1;
             }
 
             if (Math.abs(rowDiff) > 1 || Math.abs(colDiff) > 1) {
@@ -48,17 +50,22 @@ class Solution {
             int desired1 = i % 2; // start with 0
             int desired2 = 1 - i % 2; // start with 1
 
-            swapCount1 += arr[i] != desired1 ? 1 : 0;
-            swapCount2 += arr[i] != desired2 ? 1 : 0;
-            zeroCount += arr[i] == 0 ? 1 : 0;
+            swapCount1 += arr[i] != desired1 ? 1
+                                             : 0;
+            swapCount2 += arr[i] != desired2 ? 1
+                                             : 0;
+            zeroCount += arr[i] == 0 ? 1
+                                     : 0;
             desiredZero1 += 1 - desired1;
             desiredZero2 += 1 - desired2;
         }
         if (desiredZero1 == zeroCount) {
-            result = result < 0 ? swapCount1 / 2 : Math.min(result, swapCount1 / 2);
+            result = result < 0 ? swapCount1 / 2
+                                : Math.min(result, swapCount1 / 2);
         }
         if (desiredZero2 == zeroCount) {
-            result = result < 0 ? swapCount2 / 2 : Math.min(result, swapCount2 / 2);
+            result = result < 0 ? swapCount2 / 2
+                                : Math.min(result, swapCount2 / 2);
         }
 
         return result;

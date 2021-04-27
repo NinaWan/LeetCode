@@ -33,6 +33,7 @@ class Solution {
             }
         }
 
-        return arr[start] == target ? start : end;
+        return arr[start] == target ? start
+                                    : end;
     }
 }

@@ -7,16 +7,16 @@ class Solution {
         int left = 0, right = 0, up = 0, down = 0;
         for (char move : moves.toCharArray()) {
             switch (move) {
-                case 'U':
+                case 'U' :
                     up++;
                     break;
-                case 'D':
+                case 'D' :
                     down++;
                     break;
-                case 'L':
+                case 'L' :
                     left++;
                     break;
-                case 'R':
+                case 'R' :
                     right++;
             }
         }

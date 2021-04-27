@@ -16,14 +16,16 @@ class Solution {
             while (!pleStack.isEmpty() && A[i] < A[pleStack.peek()]) {
                 ple = pleStack.pop();
             }
-            leftDis[i] = ple == -1 ? 1 : i - ple + leftDis[ple];
+            leftDis[i] = ple == -1 ? 1
+                                   : i - ple + leftDis[ple];
             pleStack.push(i);
 
             // find the next less element index and calculate the distance
             while (!nleStack.isEmpty() && A[A.length - 1 - i] <= A[nleStack.peek()]) {
                 nle = nleStack.pop();
             }
-            rightDis[A.length - 1 - i] = nle == -1 ? 1 : nle - (A.length - 1 - i) + rightDis[nle];
+            rightDis[A.length - 1 - i] = nle == -1 ? 1
+                                                   : nle - (A.length - 1 - i) + rightDis[nle];
             nleStack.push(A.length - 1 - i);
         }
 

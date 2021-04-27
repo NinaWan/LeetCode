@@ -14,7 +14,8 @@ class Solution {
                 continue;
             }
 
-            int key = to > from ? to - from : 26 - (from - to);
+            int key = to > from ? to - from
+                                : 26 - (from - to);
 
             if (key > k) {
                 return false;

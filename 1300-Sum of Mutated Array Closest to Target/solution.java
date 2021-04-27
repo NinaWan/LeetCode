@@ -19,6 +19,7 @@ class Solution {
         int l = arr.length - i;
         int v = target / l;
 
-        return Math.abs(v * l - target) <= Math.abs((v + 1) * l - target) ? v : v + 1;
+        return Math.abs(v * l - target) <= Math.abs((v + 1) * l - target) ? v
+                                                                          : v + 1;
     }
 }

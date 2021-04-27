@@ -64,7 +64,8 @@ class MajorityChecker {
             }
         }
         if (j == -1) {
-            j = indexes.get(start) > right ? start : start + 1;
+            j = indexes.get(start) > right ? start
+                                           : start + 1;
         }
 
         return j - i;

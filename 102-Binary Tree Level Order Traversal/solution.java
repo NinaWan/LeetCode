@@ -11,7 +11,8 @@ public class Solution {
     public List<List<Integer>> levelOrder(TreeNode root) {
         List<List<Integer>> result = new ArrayList<List<Integer>>();
         List<TreeNode> currentLevel = new ArrayList<TreeNode>();
-        if (null == root) return result;
+        if (null == root)
+            return result;
         currentLevel.add(root);
         while (!currentLevel.isEmpty()) {
             List<TreeNode> nextLevel = new ArrayList<TreeNode>();

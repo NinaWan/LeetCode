@@ -1,6 +1,6 @@
 class Solution {
     public double[] sampleStats(int[] count) {
-        double[] ans = new double[]{-1, -1, -1, -1, -1};
+        double[] ans = new double[] {-1, -1, -1, -1, -1};
 
         double sum = 0;
         int totalCount = 0;
@@ -23,7 +23,8 @@ class Solution {
         ans[2] = sum / totalCount;
 
         int preCount = 0;
-        int mid = totalCount % 2 == 0 ? totalCount / 2 : totalCount / 2 + 1;
+        int mid = totalCount % 2 == 0 ? totalCount / 2
+                                      : totalCount / 2 + 1;
         for (int i = 0; i < count.length; i++) {
             if (count[i] == 0) {
                 continue;

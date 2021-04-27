@@ -39,12 +39,15 @@ class Solution {
             }
 
             if (num.length() > 10) {
-                return isNegative ? Integer.MIN_VALUE : Integer.MAX_VALUE;
+                return isNegative ? Integer.MIN_VALUE
+                                  : Integer.MAX_VALUE;
             }
 
-            long result = isNegative ? -Long.valueOf(num) : Long.valueOf(num);
+            long result = isNegative ? -Long.valueOf(num)
+                                     : Long.valueOf(num);
             if (result >= Long.valueOf(Integer.MAX_VALUE) || result <= Long.valueOf(Integer.MIN_VALUE)) {
-                return isNegative ? Integer.MIN_VALUE : Integer.MAX_VALUE;
+                return isNegative ? Integer.MIN_VALUE
+                                  : Integer.MAX_VALUE;
             }
 
             return (int) result;

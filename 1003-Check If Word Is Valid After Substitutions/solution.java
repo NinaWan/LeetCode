@@ -20,6 +20,7 @@ class Solution {
             }
         }
 
-        return stack.isEmpty() ? true : false;
+        return stack.isEmpty() ? true
+                               : false;
     }
 }

@@ -6,9 +6,9 @@ class Solution {
 
         // r*q = s*p, need to find the smallest r which satisfies this equation
         // r is the number of light reflection+1, thus
-        //  if r is odd, the final receptor could be 0 or 1, otherwise, it should be 2
+        // if r is odd, the final receptor could be 0 or 1, otherwise, it should be 2
         // s is the number of sides after extension
-        //  if s is odd, the final receptor is 1, otherwise, it is 0
+        // if s is odd, the final receptor is 1, otherwise, it is 0
         int r = p / gcd(p, q);
         int s = r * q / p;
 
@@ -16,7 +16,8 @@ class Solution {
             return 2;
         }
 
-        return s % 2 == 0 ? 0 : 1;
+        return s % 2 == 0 ? 0
+                          : 1;
     }
 
     private int gcd(int a, int b) {

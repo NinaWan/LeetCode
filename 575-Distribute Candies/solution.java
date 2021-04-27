@@ -7,6 +7,7 @@ class Solution {
             set.add(candy);
         }
 
-        return set.size() >= n ? n : set.size();
+        return set.size() >= n ? n
+                               : set.size();
     }
 }

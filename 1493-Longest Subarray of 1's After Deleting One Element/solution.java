@@ -23,11 +23,13 @@ class Solution {
             int curr = zeroIndex.get(i);
 
             if (curr != 0) {
-                left = i == 0 ? curr : curr - zeroIndex.get(i - 1) - 1;
+                left = i == 0 ? curr
+                              : curr - zeroIndex.get(i - 1) - 1;
             }
 
             if (curr != nums.length - 1) {
-                right = i == zeroIndex.size() - 1 ? nums.length - curr - 1 : zeroIndex.get(i + 1) - curr - 1;
+                right = i == zeroIndex.size() - 1 ? nums.length - curr - 1
+                                                  : zeroIndex.get(i + 1) - curr - 1;
             }
 
             result = Math.max(result, left + right);

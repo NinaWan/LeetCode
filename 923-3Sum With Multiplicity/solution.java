@@ -32,7 +32,8 @@ class Solution {
                     j--;
                 }
 
-                ans += A[i] == A[j] ? (countl + 1) * countl / 2 : countl * countr;
+                ans += A[i] == A[j] ? (countl + 1) * countl / 2
+                                    : countl * countr;
                 ans %= 1e9 + 7;
 
                 i++;

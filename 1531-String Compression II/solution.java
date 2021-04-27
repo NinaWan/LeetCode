@@ -26,7 +26,8 @@ class Solution {
                         break;
                     }
 
-                    int lor = ctn <= 1 ? 0 : String.valueOf(ctn).length();
+                    int lor = ctn <= 1 ? 0
+                                       : String.valueOf(ctn).length();
                     dp[i][j] = Math.min(dp[i][j], dp[p - 1][j - del] + 1 + lor);
                 }
 

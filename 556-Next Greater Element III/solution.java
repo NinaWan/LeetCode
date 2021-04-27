@@ -24,7 +24,8 @@ class Solution {
                     ans = 10 * ans + Character.getNumericValue(digits[k]);
                 }
 
-                return ans > Integer.MAX_VALUE ? -1 : (int) ans;
+                return ans > Integer.MAX_VALUE ? -1
+                                               : (int) ans;
             }
         }
 

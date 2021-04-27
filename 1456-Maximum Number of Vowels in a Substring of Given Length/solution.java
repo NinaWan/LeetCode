@@ -11,7 +11,8 @@ class Solution {
         for (int i = 0; i < k; i++) {
             Character c = s.charAt(i);
             if (i == 0) {
-                counts[i] = vowels.contains(c) ? 1 : 0;
+                counts[i] = vowels.contains(c) ? 1
+                                               : 0;
             } else if (vowels.contains(c)) {
                 counts[i] = counts[i - 1] + 1;
             } else {

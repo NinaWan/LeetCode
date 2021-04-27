@@ -2,7 +2,7 @@ class Solution {
     public int maxArea(int[] height) {
         int maxArea = Integer.MIN_VALUE;
 
-        for (int i = 0, j = height.length - 1; i < j; ) {
+        for (int i = 0, j = height.length - 1; i < j;) {
             int currArea = (j - i) * Math.min(height[i], height[j]);
 
             if (currArea > maxArea) {

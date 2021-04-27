@@ -6,7 +6,7 @@ class Solution {
         Arrays.sort(nums1);
         Arrays.sort(nums2);
 
-        for (int i = 0, j = 0; i < n1 && j < n2; ) {
+        for (int i = 0, j = 0; i < n1 && j < n2;) {
             if (nums1[i] == nums2[j]) {
                 int curr = nums1[i];
                 int c1 = 0;

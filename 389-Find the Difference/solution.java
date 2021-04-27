@@ -1,7 +1,8 @@
 public class Solution {
     public char findTheDifference(String s, String t) {
         // Assume both s and t are not null, but s may be empty
-        if (s.isEmpty()) return t.charAt(0);
+        if (s.isEmpty())
+            return t.charAt(0);
 
         Map<Character, Integer> charCount = new HashMap<Character, Integer>();
 

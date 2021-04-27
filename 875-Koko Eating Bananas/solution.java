@@ -18,7 +18,8 @@ class Solution {
 
         for (int pile : piles) {
             total += pile / K;
-            total += pile % K == 0 ? 0 : 1;
+            total += pile % K == 0 ? 0
+                                   : 1;
         }
 
         return total <= H;

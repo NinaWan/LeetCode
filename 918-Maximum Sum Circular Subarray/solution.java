@@ -10,6 +10,7 @@ class Solution {
             totalSum += A[i];
         }
 
-        return maxSum > 0 ? Math.max(maxSum, totalSum - minSum) : maxSum;
+        return maxSum > 0 ? Math.max(maxSum, totalSum - minSum)
+                          : maxSum;
     }
 }

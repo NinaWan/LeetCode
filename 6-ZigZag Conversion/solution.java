@@ -7,12 +7,12 @@ public class Solution {
         if (numRows <= 1) {
             return s;
         }
-        for (int columnIndex = 0; columnIndex < numColumns; ) {
+        for (int columnIndex = 0; columnIndex < numColumns;) {
             if (rowIndex <= 0) {
                 if (rowIndex < 0) {
                     rowIndex += 2;
                 }
-                for (; rowIndex < numRows && columnIndex < numColumns; ) {
+                for (; rowIndex < numRows && columnIndex < numColumns;) {
                     zigZag[rowIndex][columnIndex] = s.charAt(columnIndex);
                     columnIndex++;
                     rowIndex++;
@@ -20,7 +20,7 @@ public class Solution {
             }
             if (rowIndex == numRows) {
                 rowIndex -= 2;
-                for (; rowIndex >= 0 && columnIndex < numColumns; ) {
+                for (; rowIndex >= 0 && columnIndex < numColumns;) {
                     zigZag[rowIndex][columnIndex] = s.charAt(columnIndex);
                     columnIndex++;
                     rowIndex--;

@@ -19,7 +19,8 @@ class Solution {
         while (oddTail != null && oddTail.next != null) {
             ListNode evenNode = oddTail.next;
             oddTail.next = evenNode.next;
-            oddTail = oddTail.next == null ? oddTail : oddTail.next;
+            oddTail = oddTail.next == null ? oddTail
+                                           : oddTail.next;
             evenNode.next = null;
 
             if (evenHead == null) {

@@ -1,6 +1,7 @@
 public class Solution {
     public String toHex(int num) {
-        if (0 == num) return "0";
+        if (0 == num)
+            return "0";
 
         Long quotient = Math.abs(Long.valueOf(num));
         int remainder = 0;

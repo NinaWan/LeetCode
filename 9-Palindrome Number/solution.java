@@ -1,6 +1,7 @@
 public class Solution {
     public boolean isPalindrome(int x) {
-        if (x < 0) return false;
+        if (x < 0)
+            return false;
         int quotient = x;
         int reverse = 0;
 
@@ -9,7 +10,8 @@ public class Solution {
             quotient = quotient / 10;
         }
 
-        if (reverse == x) return true;
+        if (reverse == x)
+            return true;
         return false;
     }
 }

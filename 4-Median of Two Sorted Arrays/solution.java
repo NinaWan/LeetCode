@@ -22,8 +22,10 @@ class Solution {
             return Math.min(nums1[start1], nums2[start2]);
         }
 
-        int mid1 = start1 + k / 2 - 1 >= nums1.length ? Integer.MAX_VALUE : nums1[start1 + k / 2 - 1];
-        int mid2 = start2 + k / 2 - 1 >= nums2.length ? Integer.MAX_VALUE : nums2[start2 + k / 2 - 1];
+        int mid1 = start1 + k / 2 - 1 >= nums1.length ? Integer.MAX_VALUE
+                                                      : nums1[start1 + k / 2 - 1];
+        int mid2 = start2 + k / 2 - 1 >= nums2.length ? Integer.MAX_VALUE
+                                                      : nums2[start2 + k / 2 - 1];
 
         if (mid1 < mid2) {
             return findKth(nums1, start1 + k / 2, nums2, start2, k - k / 2);

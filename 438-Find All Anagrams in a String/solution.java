@@ -1,12 +1,15 @@
 public class Solution {
     public List<Integer> findAnagrams(String s, String p) {
         List<Integer> result = new ArrayList<Integer>();
-        if (null == s || s.length() == 0 || s.length() < p.length()) return result;
+        if (null == s || s.length() == 0 || s.length() < p.length())
+            return result;
 
         Map<Character, Integer> pMap = new HashMap<Character, Integer>();
         // Construct hashmap
         for (int i = 0; i < p.length(); i++) {
-            pMap.put(p.charAt(i), (pMap.get(p.charAt(i)) == null ? 0 : pMap.get(p.charAt(i))) + 1);
+            pMap.put(p.charAt(i), (pMap.get(p.charAt(i)) == null ? 0
+                                                                 : pMap.get(p.charAt(i))) +
+                    1);
         }
 
         int left = 0;

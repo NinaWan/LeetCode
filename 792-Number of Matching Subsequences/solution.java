@@ -43,7 +43,8 @@ class Solution {
                 }
             }
 
-            result += i == letters.length ? 1 : 0;
+            result += i == letters.length ? 1
+                                          : 0;
         }
 
         return result;

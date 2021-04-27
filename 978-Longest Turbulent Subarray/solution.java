@@ -5,7 +5,9 @@ class Solution {
 
         for (int i = 1; i < A.length; i++) {
             int subtraction = A[i] - A[i - 1];
-            comparison[i - 1] = subtraction == 0 ? 0 : subtraction < 0 ? -1 : 1;
+            comparison[i - 1] = subtraction == 0 ? 0
+                                                 : subtraction < 0 ? -1
+                                                                   : 1;
         }
 
         for (int i = 0; i < comparison.length; i++) {

@@ -8,7 +8,8 @@
  */
 public class Solution {
     public ListNode reverseList(ListNode head) {
-        if (null == head || null == head.next) return head;
+        if (null == head || null == head.next)
+            return head;
         ListNode reversedHead = head;
         ListNode leftHead = head.next;
         while (null != leftHead) {

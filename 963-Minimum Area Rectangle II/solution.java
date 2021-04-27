@@ -1,5 +1,3 @@
-import java.awt.Point;
-
 class Solution {
     public double minAreaFreeRect(int[][] points) {
         Map<Double, Map<Point, List<int[][]>>> map = new HashMap();
@@ -11,9 +9,10 @@ class Solution {
 
                 double r = Math.pow(p1[0] - p2[0], 2) + Math.pow(p1[1] - p2[1], 2);
                 Map<Point, List<int[][]>> centerMap = map.getOrDefault(r, new HashMap());
-                Point center = new Point(p1[0] + p2[0], p1[1] + p2[1]);
+                Point center = new Point(p1[0] + p2[0],
+                                         p1[1] + p2[1]);
                 List<int[][]> pairs = centerMap.getOrDefault(center, new ArrayList());
-                int[][] pair = new int[][]{p1, p2};
+                int[][] pair = new int[][] {p1, p2};
                 pairs.add(pair);
                 centerMap.put(center, pairs);
                 map.put(r, centerMap);
@@ -33,7 +32,8 @@ class Solution {
             }
         }
 
-        return ans < 0 ? 0 : ans;
+        return ans < 0 ? 0
+                       : ans;
     }
 
     private double rectangleArea(int[][] pair1, int[][] pair2) {

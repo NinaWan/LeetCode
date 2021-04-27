@@ -36,15 +36,9 @@ class Solution {
     }
 
     public List<List<Integer>> dedup(List<List<Integer>> origin) {
-        return new HashSet<String>(origin.stream()
-                .map(l -> l.stream()
-                        .map(String::valueOf)
-                        .collect(Collectors.joining(",")))
+        return new HashSet<String>(origin.stream().map(l -> l.stream().map(String::valueOf).collect(Collectors.joining(",")))
                 .collect(Collectors.toList())).stream()
-                .map(s -> Arrays.asList(s.split(","))
-                        .stream()
-                        .map(Integer::parseInt)
-                        .collect(Collectors.toList()))
-                .collect(Collectors.toList());
+                        .map(s -> Arrays.asList(s.split(",")).stream().map(Integer::parseInt).collect(Collectors.toList()))
+                        .collect(Collectors.toList());
     }
 }

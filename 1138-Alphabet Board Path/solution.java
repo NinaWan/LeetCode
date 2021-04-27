@@ -9,8 +9,10 @@ class Solution {
             int j = (c - 'a') % 5;
 
             if (pi != i || pj != j) {
-                char ud = i > pi ? 'D' : 'U';
-                char lr = j > pj ? 'R' : 'L';
+                char ud = i > pi ? 'D'
+                                 : 'U';
+                char lr = j > pj ? 'R'
+                                 : 'L';
 
                 if (pi * 5 + pj == 25) { // from z to other character
                     for (int m = 0; m < Math.abs(i - pi); m++) {

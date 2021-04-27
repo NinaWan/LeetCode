@@ -26,7 +26,8 @@ class Solution {
         ListNode nodeBeforeM = curr;
         ListNode pre = curr.next;
         ListNode nodeM = pre;
-        curr = pre != null ? pre.next : null;
+        curr = pre != null ? pre.next
+                           : null;
         pre.next = null;
 
         // move == m

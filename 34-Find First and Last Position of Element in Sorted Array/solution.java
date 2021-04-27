@@ -1,7 +1,7 @@
 class Solution {
     public int[] searchRange(int[] nums, int target) {
         if (nums == null || nums.length == 0) {
-            return new int[]{-1, -1};
+            return new int[] {-1, -1};
         }
 
         int start = 0;
@@ -27,8 +27,9 @@ class Solution {
         }
 
         if (result[0] == -1) {
-            result[0] = nums[start] == target ? start :
-                    nums[end] == target ? end : -1;
+            result[0] = nums[start] == target ? start
+                                              : nums[end] == target ? end
+                                                                    : -1;
         }
 
         start = 0;
@@ -51,8 +52,9 @@ class Solution {
         }
 
         if (result[1] == -1) {
-            result[1] = nums[end] == target ? end :
-                    nums[start] == target ? start : -1;
+            result[1] = nums[end] == target ? end
+                                            : nums[start] == target ? start
+                                                                    : -1;
         }
 
         return result;

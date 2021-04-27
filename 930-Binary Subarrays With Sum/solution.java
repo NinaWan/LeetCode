@@ -32,8 +32,10 @@ class Solution {
             int sum = 1;
             while (right < list.size()) {
                 if (sum == S) {
-                    int a = left == 0 ? list.get(left) + 1 : list.get(left) - list.get(left - 1);
-                    int b = right == list.size() - 1 ? A.length - list.get(right) : list.get(right + 1) - list.get(right);
+                    int a = left == 0 ? list.get(left) + 1
+                                      : list.get(left) - list.get(left - 1);
+                    int b = right == list.size() - 1 ? A.length - list.get(right)
+                                                     : list.get(right + 1) - list.get(right);
                     ans += a * b;
                     right++;
                     sum++;

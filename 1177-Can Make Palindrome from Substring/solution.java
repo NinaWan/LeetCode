@@ -15,7 +15,8 @@ class Solution {
         for (int[] query : queries) {
             int change = 0;
             int[] right = letterCount[query[1]];
-            int[] left = query[0] == 0 ? new int[26] : letterCount[query[0] - 1];
+            int[] left = query[0] == 0 ? new int[26]
+                                       : letterCount[query[0] - 1];
 
             for (int i = 0; i < 26; i++) {
                 change += (right[i] - left[i]) % 2;

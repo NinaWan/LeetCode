@@ -4,7 +4,7 @@ class Solution {
         Arrays.sort(nums2);
         Set<Integer> set = new HashSet();
 
-        for (int i = 0, j = 0; i < nums1.length && j < nums2.length; ) {
+        for (int i = 0, j = 0; i < nums1.length && j < nums2.length;) {
             if (nums1[i] == nums2[j]) {
                 set.add(nums1[i]);
                 i++;

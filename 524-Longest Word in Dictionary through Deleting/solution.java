@@ -18,7 +18,7 @@ class Solution {
 
     private boolean isPossible(String s, String word) {
         int i = 0, j = 0;
-        for (; i < s.length() && j < word.length(); ) {
+        for (; i < s.length() && j < word.length();) {
             if (s.charAt(i) == word.charAt(j)) {
                 i++;
                 j++;

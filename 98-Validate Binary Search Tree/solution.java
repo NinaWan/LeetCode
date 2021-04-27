@@ -36,7 +36,8 @@ class Solution {
             current = current.right;
         }
 
-        return null == current ? null : current.val;
+        return null == current ? null
+                               : current.val;
     }
 
     public Integer findMin(TreeNode root) {
@@ -45,6 +46,7 @@ class Solution {
             current = current.left;
         }
 
-        return null == current ? null : current.val;
+        return null == current ? null
+                               : current.val;
     }
 }

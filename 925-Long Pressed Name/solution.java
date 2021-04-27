@@ -38,6 +38,7 @@ class Solution {
             }
         }
 
-        return pt == t && pn == n ? true : false;
+        return pt == t && pn == n ? true
+                                  : false;
     }
 }

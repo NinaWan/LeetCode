@@ -17,7 +17,8 @@ class Solution {
             }
 
             if (freq[i] > i) {
-                ans += freq[i] % (1 + i) == 0 ? freq[i] : freq[i] - freq[i] % (1 + i) + 1 + i;
+                ans += freq[i] % (1 + i) == 0 ? freq[i]
+                                              : freq[i] - freq[i] % (1 + i) + 1 + i;
             }
         }
 

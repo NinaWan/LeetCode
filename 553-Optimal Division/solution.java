@@ -13,7 +13,8 @@ class Solution {
 
         for (int i = 1; i < nums.length; i++) {
             ans += String.valueOf(nums[i]);
-            ans += i == nums.length - 1 ? ")" : "/";
+            ans += i == nums.length - 1 ? ")"
+                                        : "/";
         }
 
         return ans;

@@ -12,10 +12,11 @@ class Solution {
         }
 
         int addition = 0;
-        for (int i = min; ; i++) {
+        for (int i = min;; i++) {
             int count = counter.getOrDefault(i, 0) + addition;
 
-            addition = count > 1 ? count - 1 : 0;
+            addition = count > 1 ? count - 1
+                                 : 0;
             result += addition;
 
             if (i > max && addition == 0) {

@@ -2,7 +2,7 @@ class Solution {
     public int numFriendRequests(int[] ages) {
         int result = 0;
 
-        //<age, count>
+        // <age, count>
         Map<Integer, Integer> ageCounts = new TreeMap();
         for (int age : ages) {
             ageCounts.put(age, ageCounts.getOrDefault(age, 0) + 1);

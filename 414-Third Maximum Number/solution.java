@@ -5,7 +5,8 @@ class Solution {
         Integer third = null;
 
         if (nums.length < 3) {
-            return nums.length == 1 ? nums[0] : Math.max(nums[0], nums[1]);
+            return nums.length == 1 ? nums[0]
+                                    : Math.max(nums[0], nums[1]);
         }
 
         for (int num : nums) {
@@ -21,6 +22,8 @@ class Solution {
             }
         }
 
-        return third == null ? second == null ? first : Math.max(first, second) : third;
+        return third == null ? second == null ? first
+                                              : Math.max(first, second)
+                             : third;
     }
 }

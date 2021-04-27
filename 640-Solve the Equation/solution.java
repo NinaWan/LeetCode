@@ -38,11 +38,14 @@ class Solution {
             String factor = factors[i];
             int num = 0;
             if (factor.charAt(factor.length() - 1) == 'x') {
-                num = factor.equals("x") ? 1 : Integer.valueOf(factor.substring(0, factor.length() - 1));
-                ans[0] += signs.get(i) == '+' ? num : -num;
+                num = factor.equals("x") ? 1
+                                         : Integer.valueOf(factor.substring(0, factor.length() - 1));
+                ans[0] += signs.get(i) == '+' ? num
+                                              : -num;
             } else {
                 num = Integer.valueOf(factor);
-                ans[1] += signs.get(i) == '+' ? num : -num;
+                ans[1] += signs.get(i) == '+' ? num
+                                              : -num;
             }
         }
 

@@ -6,7 +6,7 @@ class Solution {
             for (int j = 0; j < 3; j++) {
                 char c = row.charAt(j);
                 List<int[]> list = map.getOrDefault(c, new ArrayList());
-                list.add(new int[]{i, j});
+                list.add(new int[] {i, j});
                 map.put(c, list);
             }
         }
@@ -39,8 +39,10 @@ class Solution {
         for (int[] point : points) {
             row[point[0]]++;
             col[point[1]]++;
-            diag += point[0] == point[1] ? 1 : 0;
-            backDiag += point[0] + point[1] == 2 ? 1 : 0;
+            diag += point[0] == point[1] ? 1
+                                         : 0;
+            backDiag += point[0] + point[1] == 2 ? 1
+                                                 : 0;
             if (row[point[0]] == 3 || col[point[1]] == 3 || diag == 3 || backDiag == 3) {
                 return true;
             }

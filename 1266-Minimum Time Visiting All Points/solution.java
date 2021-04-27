@@ -15,11 +15,13 @@ class Solution {
 
             while (xDiff != 0 || yDiff != 0) {
                 if (xDiff != 0) {
-                    curr[0] += xDiff < 0 ? -1 : 1;
+                    curr[0] += xDiff < 0 ? -1
+                                         : 1;
                 }
 
                 if (yDiff != 0) {
-                    curr[1] += yDiff < 0 ? -1 : 1;
+                    curr[1] += yDiff < 0 ? -1
+                                         : 1;
                 }
 
                 result++;

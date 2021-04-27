@@ -2,7 +2,6 @@ class Solution {
     public List<String> findAndReplacePattern(String[] words, String pattern) {
         List<String> result = new ArrayList();
 
-
         for (String word : words) {
             Map<Character, Character> w2p = new HashMap();
             Map<Character, Character> p2w = new HashMap();

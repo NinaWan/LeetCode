@@ -19,7 +19,6 @@ class Solution {
         List<TreeNode> rightToLeft = new ArrayList<>();
         leftToRight.add(root);
 
-
         while (leftToRight.size() != 0 || rightToLeft.size() != 0) {
             if (leftToRight.size() != 0) {
                 List<Integer> temp = new ArrayList<>();

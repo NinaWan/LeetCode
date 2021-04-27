@@ -1,1 +1,1 @@
-###1044. Longest Duplicate Substring
+### 1044. Longest Duplicate Substring

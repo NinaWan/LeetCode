@@ -34,7 +34,6 @@ class Solution {
             leftMinDepth = minDepth(node.left, currentDepth + 1);
         }
 
-
         if (null != node.right) {
             rightMinDepth = minDepth(node.right, currentDepth + 1);
         }

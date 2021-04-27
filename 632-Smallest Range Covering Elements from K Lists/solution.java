@@ -27,7 +27,6 @@ class Solution {
             queue.offer(k);
         }
 
-        return new int[] {lower,
-                          upper};
+        return new int[] {lower, upper};
     }
 }

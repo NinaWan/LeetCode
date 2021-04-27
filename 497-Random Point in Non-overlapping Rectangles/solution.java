@@ -25,7 +25,7 @@ class Solution {
         int x = rect[0] + (subCount - randomCount) % (rect[2] - rect[0] + 1);
         int y = rect[1] + (subCount - randomCount) / (rect[2] - rect[0] + 1);
 
-        return new int[]{x, y};
+        return new int[] {x, y};
     }
 }
 

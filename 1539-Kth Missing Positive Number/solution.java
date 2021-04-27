@@ -10,7 +10,8 @@ class Solution {
                 num++;
             }
 
-            num += i == arr.length - 1 ? 0 : 1;
+            num += i == arr.length - 1 ? 0
+                                       : 1;
         }
 
         while (k > 0) {

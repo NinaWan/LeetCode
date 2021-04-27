@@ -15,7 +15,8 @@ class Solution {
 
             if (i == prices.length - 1 || prices[i] >= prices[i + 1]) {
                 max += prices[i] - bottom;
-                bottom = i == prices.length - 1 ? bottom : prices[i + 1];
+                bottom = i == prices.length - 1 ? bottom
+                                                : prices[i + 1];
             }
         }
 

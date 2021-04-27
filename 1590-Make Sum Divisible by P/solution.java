@@ -20,6 +20,7 @@ class Solution {
             ans = Math.min(ans, i - last.getOrDefault((curr - remainder + p) % p, -nums.length));
         }
 
-        return ans < nums.length ? ans : -1;
+        return ans < nums.length ? ans
+                                 : -1;
     }
 }

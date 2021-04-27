@@ -17,7 +17,8 @@ public class Solution {
         int m = getLength(headA);
         int n = getLength(headB);
 
-        if (m == 0 || n == 0) return null;
+        if (m == 0 || n == 0)
+            return null;
         if (m < n) {
             pointerB = movePointer(pointerB, n - m);
         } else {

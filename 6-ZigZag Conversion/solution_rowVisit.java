@@ -8,12 +8,12 @@ class Solution {
 
         for (int i = 0; i < numRows; i++) {
             if (i == 0 || i == numRows - 1) {
-                for (int j = i; j < s.length(); ) {
+                for (int j = i; j < s.length();) {
                     result += s.charAt(j);
                     j = j + 2 * (numRows - 1);
                 }
             } else {
-                for (int j = i; j < s.length(); ) {
+                for (int j = i; j < s.length();) {
                     result += s.charAt(j);
                     int next = 2 * (numRows - i - 1) + j;
                     if (next < s.length()) {

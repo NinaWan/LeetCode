@@ -22,7 +22,8 @@ class Solution {
                 }
 
                 num = Math.min(e.getValue(), use_limit - num);
-                num = count + num > num_wanted ? num_wanted - count : num;
+                num = count + num > num_wanted ? num_wanted - count
+                                               : num;
 
                 sum += value * num;
                 count += num;

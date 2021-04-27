@@ -1,11 +1,12 @@
 class Solution {
     public String dayOfTheWeek(int day, int month, int year) {
-        int[] daysOfMonth = new int[]{31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
-        String[] dayOfWeek = new String[]{"Thursday", "Friday", "Saturday", "Sunday", "Monday", "Tuesday", "Wednesday"};
+        int[] daysOfMonth = new int[] {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
+        String[] dayOfWeek = new String[] {"Thursday", "Friday", "Saturday", "Sunday", "Monday", "Tuesday", "Wednesday"};
         int daySum = 0;
 
         for (int y = 1971; y < year; y++) {
-            daySum += isLunaYear(y) ? 366 : 365;
+            daySum += isLunaYear(y) ? 366
+                                    : 365;
         }
 
         for (int m = 1; m < month; m++) {

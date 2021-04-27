@@ -16,10 +16,13 @@ class Solution {
         for (int i = 0; i < n1; i++) {
             for (int j = 0; j < n2; j++) {
                 if (word1.charAt(i) == word2.charAt(j)) {
-                    lcs[i][j] = i != 0 && j != 0 ? lcs[i - 1][j - 1] + 1 : 1;
+                    lcs[i][j] = i != 0 && j != 0 ? lcs[i - 1][j - 1] + 1
+                                                 : 1;
                 } else {
-                    int a = i == 0 ? 0 : lcs[i - 1][j];
-                    int b = j == 0 ? 0 : lcs[i][j - 1];
+                    int a = i == 0 ? 0
+                                   : lcs[i - 1][j];
+                    int b = j == 0 ? 0
+                                   : lcs[i][j - 1];
                     lcs[i][j] = Math.max(a, b);
                 }
             }

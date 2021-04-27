@@ -9,7 +9,8 @@
  */
 public class Solution {
     public int sumOfLeftLeaves(TreeNode root) {
-        if (root == null) return 0;
+        if (root == null)
+            return 0;
 
         int result = 0;
         Queue<TreeNode> queue = new LinkedList<TreeNode>();
@@ -19,7 +20,8 @@ public class Solution {
             TreeNode current = queue.poll();
             // Left node
             if (null != current.left) {
-                if (null == current.left.left && null == current.left.right) result += current.left.val;
+                if (null == current.left.left && null == current.left.right)
+                    result += current.left.val;
                 queue.add(current.left);
             }
 

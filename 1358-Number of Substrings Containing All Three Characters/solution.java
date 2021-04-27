@@ -13,7 +13,6 @@ class Solution {
             result += p;
         }
 
-
         return result;
     }
 }

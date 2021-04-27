@@ -17,8 +17,10 @@ class Solution {
             }
 
             if (right - left + 1 == k) {
-                int a = left == 0 ? list.get(left) + 1 : list.get(left) - list.get(left - 1);
-                int b = right == list.size() - 1 ? nums.length - list.get(right) : list.get(right + 1) - list.get(right);
+                int a = left == 0 ? list.get(left) + 1
+                                  : list.get(left) - list.get(left - 1);
+                int b = right == list.size() - 1 ? nums.length - list.get(right)
+                                                 : list.get(right + 1) - list.get(right);
                 ans += a * b;
                 left++;
                 right++;

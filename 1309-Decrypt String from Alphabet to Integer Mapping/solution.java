@@ -6,7 +6,8 @@ class Solution {
             char curr = s.charAt(i);
             if (curr == '#') {
                 result = result.substring(0, result.length() - 2);
-                result += String.valueOf((char) (Character.getNumericValue(s.charAt(i - 2)) * 10 + Character.getNumericValue(s.charAt(i - 1)) + 'a' - 1));
+                result += String
+                        .valueOf((char) (Character.getNumericValue(s.charAt(i - 2)) * 10 + Character.getNumericValue(s.charAt(i - 1)) + 'a' - 1));
             } else {
                 result += String.valueOf((char) (Character.getNumericValue(s.charAt(i)) + 'a' - 1));
             }
