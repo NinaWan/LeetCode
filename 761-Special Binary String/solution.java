@@ -1,0 +1,23 @@
+import java.util.stream.Collectors;
+
+class Solution {
+    public String makeLargestSpecial(String S) {
+        int count = 0, i = 0;
+        List<String> res = new ArrayList();
+
+        for (int j = 0; j < S.length(); j++) {
+            if (S.charAt(j) == '1') {
+                count++;
+            } else {
+                count--;
+            }
+
+            if (count == 0) {
+                res.add('1' + makeLargestSpecial(S.substring(i + 1, j)) + '0');
+                i = j + 1;
+            }
+        }
+
+        return res.stream().sorted(Collections.reverseOrder()).collect(Collectors.joining());
+    }
+}
