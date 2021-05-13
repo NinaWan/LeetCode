@@ -1,9 +1,9 @@
 class Solution {
-    public int minEatingSpeed(int[] piles, int H) {
+    public int minEatingSpeed(int[] piles, int h) {
         int low = 1, high = (int) 1e9;
         while (low < high) {
             int mid = low + (high - low) / 2;
-            if (isValid(piles, H, mid)) {
+            if (isValid(piles, h, mid)) {
                 high = mid;
             } else {
                 low = mid + 1;
@@ -13,15 +13,15 @@ class Solution {
         return low;
     }
 
-    private boolean isValid(int[] piles, int H, int K) {
+    private boolean isValid(int[] piles, int h, int k) {
         int total = 0;
 
         for (int pile : piles) {
-            total += pile / K;
-            total += pile % K == 0 ? 0
+            total += pile / k;
+            total += pile % k == 0 ? 0
                                    : 1;
         }
 
-        return total <= H;
+        return total <= h;
     }
 }
