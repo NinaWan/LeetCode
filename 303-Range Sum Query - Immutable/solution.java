@@ -1,22 +1,20 @@
-public class NumArray {
-    private int[] nums;
+class NumArray {
+    int[] preSum;
 
     public NumArray(int[] nums) {
-        this.nums = nums;
+        preSum = new int[nums.length];
+        int sum = 0;
         for (int i = 0; i < nums.length; i++) {
-            if (i == 0) {
-                this.nums[i] = nums[i];
-            } else {
-                this.nums[i] = nums[i] + this.nums[i - 1];
-            }
+            sum += nums[i];
+            preSum[i] = sum;
         }
     }
 
-    public int sumRange(int i, int j) {
-        if (i > 0) {
-            return nums[j] - nums[i - 1];
+    public int sumRange(int left, int right) {
+        if (left == 0) {
+            return preSum[right];
         } else {
-            return nums[j];
+            return preSum[right] - preSum[left - 1];
         }
     }
 }
@@ -24,5 +22,5 @@ public class NumArray {
 /**
  * Your NumArray object will be instantiated and called as such:
  * NumArray obj = new NumArray(nums);
- * int param_1 = obj.sumRange(i,j);
+ * int param_1 = obj.sumRange(left,right);
  */
