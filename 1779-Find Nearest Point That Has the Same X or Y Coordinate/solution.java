@@ -1,15 +1,14 @@
 class Solution {
     public int nearestValidPoint(int x, int y, int[][] points) {
-        int ans = -1;
-        int minDist = Integer.MAX_VALUE;
-
+        int ans = -1, minDist = Integer.MAX_VALUE;
         for (int i = 0; i < points.length; i++) {
-            int px = points[i][0];
-            int py = points[i][1];
-            int currDist = Math.max(Math.abs(y - py), Math.abs(x - px));
-            if ((x == px || y == py) && currDist < minDist) {
-                minDist = currDist;
-                ans = i;
+            int x1 = points[i][0], y1 = points[i][1];
+            if (x1 == x || y1 == y) {
+                int dist = Math.abs(x1 - x) + Math.abs(y1 - y);
+                if (dist < minDist) {
+                    minDist = dist;
+                    ans = i;
+                }
             }
         }
 
