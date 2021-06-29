@@ -1,35 +1,34 @@
 /**
  * Definition for a binary tree node.
  * public class TreeNode {
- * int val;
- * TreeNode left;
- * TreeNode right;
- * TreeNode(int x) { val = x; }
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode() {}
+ *     TreeNode(int val) { this.val = val; }
+ *     TreeNode(int val, TreeNode left, TreeNode right) {
+ *         this.val = val;
+ *         this.left = left;
+ *         this.right = right;
+ *     }
  * }
  */
 class Solution {
     public TreeNode buildTree(int[] inorder, int[] postorder) {
-        if (inorder == null || inorder.length == 0 || postorder == null || postorder.length == 0) {
-            return null;
-        }
-
-        return divideConquer(inorder, 0, inorder.length - 1, postorder, postorder.length - 1, 0);
+        return buildTree(inorder, 0, inorder.length - 1, postorder, 0, postorder.length - 1);
     }
 
-    public TreeNode divideConquer(int[] inorder, int inStart, int inEnd, int[] postorder, int postStart, int postEnd) {
-        if (postStart < postEnd) {
+    private TreeNode buildTree(int[] inorder, int instart, int inend, int[] postorder, int poststart, int postend) {
+        if (poststart > postend) {
             return null;
         }
 
-        TreeNode root = new TreeNode(postorder[postStart]);
-
-        for (int i = inStart; i <= inEnd; i++) {
-            int nodeLeft = i - inStart;
-            int nodeRight = inEnd - i;
-
+        TreeNode root = new TreeNode(postorder[postend]);
+        for (int i = instart; i <= inend; i++) {
             if (inorder[i] == root.val) {
-                root.left = divideConquer(inorder, inStart, i - 1, postorder, postEnd + nodeLeft - 1, postEnd);
-                root.right = divideConquer(inorder, i + 1, inEnd, postorder, postStart - 1, postStart - nodeRight);
+                int leftCount = i - instart;
+                root.left = buildTree(inorder, instart, i - 1, postorder, poststart, poststart + leftCount - 1);
+                root.right = buildTree(inorder, i + 1, inend, postorder, poststart + leftCount, postend - 1);
                 break;
             }
         }
