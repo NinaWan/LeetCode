@@ -50,14 +50,11 @@ class Solution {
         for (int i = 0; i <= nums.length - 4; i++) {
             for (int j = i + 1; j <= nums.length - 3; j++) {
                 List<List<Integer>> ts = twoSum(nums, target - nums[i] - nums[j], j + 1, nums.length - 1);
-                if (!ts.isEmpty()) {
-                    for (List<Integer> l : ts) {
-                        List<Integer> quadruplet = new ArrayList();
-                        quadruplet.addAll(Arrays.asList(nums[i], nums[j]));
-                        quadruplet.addAll(l);
-                        result.add(quadruplet);
-                    }
-                    ;
+                for (List<Integer> l : ts) {
+                    List<Integer> quadruplet = new ArrayList();
+                    quadruplet.addAll(Arrays.asList(nums[i], nums[j]));
+                    quadruplet.addAll(l);
+                    result.add(quadruplet);
                 }
             }
         }
