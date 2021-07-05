@@ -3,49 +3,52 @@
  * public class ListNode {
  * int val;
  * ListNode next;
- * ListNode(int x) { val = x; }
+ * ListNode() {}
+ * ListNode(int val) { this.val = val; }
+ * ListNode(int val, ListNode next) { this.val = val; this.next = next; }
  * }
  */
-public class Solution {
+class Solution {
     public boolean isPalindrome(ListNode head) {
-        if (head == null || head.next == null) {
-            return true;
+        ListNode q = reverse(findCenter(head));
+        ListNode p = head;
+
+        while (p != null && q != null) {
+            if (p.val != q.val) {
+                return false;
+            }
+            p = p.next;
+            q = q.next;
         }
 
-        // Find the center of the list
-        ListNode slow = head;
-        ListNode fast = head;
-        while (fast.next != null && fast.next.next != null) {
+        return true;
+    }
+
+    private ListNode findCenter(ListNode head) {
+        ListNode slow = head, fast = head;
+
+        while (fast != null && fast.next != null) {
+            slow = slow.next;
             fast = fast.next.next;
+        }
+
+        if (fast != null) {
             slow = slow.next;
         }
 
-        // Reverse the second half of the list
-        ListNode secondHead = slow.next;
-        ListNode previous = secondHead;
-        ListNode latter = previous.next;
-        ListNode temp;
-        while (latter != null) {
-            temp = latter;
-            latter = latter.next;
-            temp.next = previous;
-            previous = temp;
-        }
-        secondHead.next = null;
+        return slow;
+    }
 
-        // Compare these two lists
-        ListNode p1 = head;
-        ListNode p2 = previous;
-        while (p1 != null && p2 != null) {
-            if (p1.val != p2.val) {
-                return false;
-            }
-            p1 = p1.next;
-            p2 = p2.next;
+    private ListNode reverse(ListNode head) {
+        ListNode pre = null, cur = head, nxt = head;
+
+        while (cur != null) {
+            nxt = cur.next;
+            cur.next = pre;
+            pre = cur;
+            cur = nxt;
         }
-        if (p1 == null || p2 == null) {
-            return true;
-        }
-        return false;
+
+        return pre;
     }
 }
