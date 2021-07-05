@@ -1,10 +1,10 @@
 /**
  * Definition for a binary tree node.
  * public class TreeNode {
- * int val;
- * TreeNode left;
- * TreeNode right;
- * TreeNode(int x) { val = x; }
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode(int x) { val = x; }
  * }
  */
 class Solution {
@@ -16,14 +16,15 @@ class Solution {
         TreeNode left = lowestCommonAncestor(root.left, p, q);
         TreeNode right = lowestCommonAncestor(root.right, p, q);
 
-        if (null != left && null != right) {
+        if (left != null && right != null) {
             return root;
         }
 
-        if (null != left) {
-            return left;
-        } else {
-            return right;
+        if (left == null && right == null) {
+            return null;
         }
+
+        return left == null ? right
+                            : left;
     }
 }
