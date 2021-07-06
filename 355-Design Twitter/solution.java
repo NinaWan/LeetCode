@@ -12,10 +12,7 @@ class Twitter {
 
     /** Compose a new tweet. */
     public void postTweet(int userId, int tweetId) {
-        User user = users.getOrDefault(userId, new User(userId));
-        user.getTweets().add(new Tweet(tweetId,
-                                       timestamp++));
-        this.users.put(userId, user);
+        users.computeIfAbsent(userId, x -> new User(userId)).postTweet(tweetId);
     }
 
     /**
@@ -33,17 +30,14 @@ class Twitter {
 
     /** Follower follows a followee. If the operation is invalid, it should be a no-op. */
     public void follow(int followerId, int followeeId) {
-        User follower = this.users.getOrDefault(followerId, new User(followerId));
-        follower.getFollowees().add(followeeId);
-        User followee = this.users.getOrDefault(followeeId, new User(followeeId));
-        this.users.put(followerId, follower);
-        this.users.put(followeeId, followee);
+        users.computeIfAbsent(followeeId, x -> new User(followeeId));
+        users.computeIfAbsent(followerId, x -> new User(followerId)).follow(followeeId);
     }
 
     /** Follower unfollows a followee. If the operation is invalid, it should be a no-op. */
     public void unfollow(int followerId, int followeeId) {
-        if (this.users.containsKey(followerId) && followerId != followeeId) {
-            this.users.get(followerId).getFollowees().remove(followeeId);
+        if (users.containsKey(followerId) && followerId != followeeId) {
+            users.get(followerId).unfollow(followeeId);
         }
     }
 
@@ -68,22 +62,35 @@ class Twitter {
 
     private class User {
         private int id;
-        private Set<Integer> followees;
-        private List<Tweet> tweets;
+        private Set<Integer> followed;
+        private LinkedList<Tweet> tweets;
 
         public User(int id) {
             this.id = id;
-            this.followees = new HashSet();
-            followees.add(id);
-            this.tweets = new ArrayList();
+            this.followed = new HashSet();
+            this.tweets = new LinkedList();
+            follow(id);
+        }
+
+        public void follow(int followeeId) {
+            followed.add(followeeId);
+        }
+
+        public void unfollow(int followeeId) {
+            followed.remove(followeeId);
+        }
+
+        public void postTweet(int tweetId) {
+            tweets.addFirst(new Tweet(tweetId,
+                                      timestamp++));
         }
 
         public Set<Integer> getFollowees() {
-            return this.followees;
+            return followed;
         }
 
-        public List<Tweet> getTweets() {
-            return this.tweets;
+        public LinkedList<Tweet> getTweets() {
+            return tweets;
         }
     }
 }
