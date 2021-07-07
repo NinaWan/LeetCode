@@ -1,35 +1,35 @@
 class Solution {
-    public int shipWithinDays(int[] weights, int D) {
-        int end = 0;
-        int start = 0;
+    public int shipWithinDays(int[] weights, int days) {
+        int lo = 0, hi = 0;
         for (int weight : weights) {
-            end += weight;
-            start = Math.max(start, weight);
+            lo = Math.max(lo, weight);
+            hi += weight;
         }
 
-        while (start < end) {
-            int mid = start + (end - start) / 2;
-            int daysNeeded = calculateDaysNeeded(weights, mid);
-            if (daysNeeded > D) {
-                start = mid + 1;
+        while (lo < hi) {
+            int mid = lo + (hi - lo) / 2;
+            int needed = calculateDaysNeeded(mid, weights);
+            if (needed > days) {
+                lo = mid + 1;
             } else {
-                end = mid;
+                hi = mid;
             }
         }
 
-        return start;
+        return lo;
     }
 
-    private int calculateDaysNeeded(int[] weights, int capacity) {
-        int daysNeeded = 0;
-        int currLoading = 0;
+    private int calculateDaysNeeded(int cap, int[] weights) {
+        int res = 0, loading = 0;
         for (int weight : weights) {
-            currLoading += weight;
-            if (currLoading > capacity) {
-                daysNeeded++;
-                currLoading = weight;
+            loading += weight;
+
+            if (loading > cap) {
+                res++;
+                loading = weight;
             }
         }
-        return daysNeeded + 1;
+
+        return res + 1;
     }
 }
