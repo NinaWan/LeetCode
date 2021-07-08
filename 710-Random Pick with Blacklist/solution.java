@@ -12,15 +12,15 @@ class Solution {
             map.put(b, -1);
         }
 
-        this.M = N - blacklist.length;
-        N--;
+        M = N - blacklist.length;
+        int last = N - 1;
         for (int b : blacklist) {
             if (b < M) {
-                while (map.containsKey(N)) {
-                    N--;
+                while (map.containsKey(last)) {
+                    last--;
                 }
-                map.put(b, N);
-                N--;
+                map.put(b, last);
+                last--;
             }
         }
     }

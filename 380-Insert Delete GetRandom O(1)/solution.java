@@ -1,54 +1,44 @@
 class RandomizedSet {
+    Map<Integer, Integer> valToIndex;
+    List<Integer> list;
 
-    private Map<Integer, Integer> map;
-    private List<Integer> list;
-
-    /**
-     * Initialize your data structure here.
-     */
+    /** Initialize your data structure here. */
     public RandomizedSet() {
-        this.map = new HashMap();
-        this.list = new ArrayList();
+        valToIndex = new HashMap();
+        list = new ArrayList();
     }
 
-    /**
-     * Inserts a value to the set. Returns true if the set did not already contain the specified element.
-     */
+    /** Inserts a value to the set. Returns true if the set did not already contain the specified element. */
     public boolean insert(int val) {
-        if (map.containsKey(val) && map.get(val) != -1) {
+        if (valToIndex.containsKey(val)) {
             return false;
-        } else {
-            list.add(val);
-            map.put(val, list.size() - 1);
         }
+
+        list.add(val);
+        valToIndex.put(val, list.size() - 1);
 
         return true;
     }
 
-    /**
-     * Removes a value from the set. Returns true if the set contained the specified element.
-     */
+    /** Removes a value from the set. Returns true if the set contained the specified element. */
     public boolean remove(int val) {
-        if (map.containsKey(val) && map.get(val) != -1) {
-            int lastIndex = list.size() - 1;
-            int lastVal = list.get(lastIndex);
-            int index = map.get(val);
-
-            list.set(index, lastVal);
-            map.put(lastVal, index);
-            map.put(val, -1);
-
-            list.remove(lastIndex);
-
-            return true;
+        if (!valToIndex.containsKey(val)) {
+            return false;
         }
 
-        return false;
+        int i = valToIndex.get(val);
+        int lastVal = list.get(list.size() - 1);
+
+        list.set(i, lastVal);
+        list.remove(list.size() - 1);
+
+        valToIndex.put(lastVal, i);
+        valToIndex.remove(val);
+
+        return true;
     }
 
-    /**
-     * Get a random element from the set.
-     */
+    /** Get a random element from the set. */
     public int getRandom() {
         return list.get((int) (Math.random() * list.size()));
     }

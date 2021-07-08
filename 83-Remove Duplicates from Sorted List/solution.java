@@ -3,32 +3,28 @@
  * public class ListNode {
  * int val;
  * ListNode next;
- * ListNode(int x) { val = x; }
+ * ListNode() {}
+ * ListNode(int val) { this.val = val; }
+ * ListNode(int val, ListNode next) { this.val = val; this.next = next; }
  * }
  */
-public class Solution {
+class Solution {
     public ListNode deleteDuplicates(ListNode head) {
-        if (head == null || head.next == null) {
-            return head;
+        if (head == null) {
+            return null;
         }
 
-        ListNode p = head;
-        ListNode previous = head;
-        ListNode temp;
-        p = p.next;
-
-        while (p != null) {
-            if (previous.val == p.val) {// is duplicate
-                // Remove from the linked list
-                previous.next = p.next;
-                temp = p;
-                p = p.next;
-                temp.next = null;
-            } else {
-                previous = p;
-                p = p.next;
+        ListNode slow = head, fast = head;
+        while (fast != null) {
+            if (slow.val != fast.val) {
+                slow.next = fast;
+                slow = slow.next;
             }
+
+            fast = fast.next;
         }
+
+        slow.next = null;
 
         return head;
     }
