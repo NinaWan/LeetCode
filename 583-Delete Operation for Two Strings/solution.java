@@ -1,33 +1,23 @@
 class Solution {
     public int minDistance(String word1, String word2) {
-        if (null == word1 || null == word2) {
-            return 0;
-        }
+        int lcs = longestCommonSequence(word1, word2);
+        return word1.length() + word2.length() - 2 * lcs;
+    }
 
-        int n1 = word1.length();
-        int n2 = word2.length();
+    private int longestCommonSequence(String s1, String s2) {
+        int m = s1.length(), n = s2.length();
+        int[][] dp = new int[m + 1][n + 1];
 
-        if (n1 == 0 || n2 == 0) {
-            return Math.max(n1, n2);
-        }
-
-        int[][] lcs = new int[n1][n2];
-
-        for (int i = 0; i < n1; i++) {
-            for (int j = 0; j < n2; j++) {
-                if (word1.charAt(i) == word2.charAt(j)) {
-                    lcs[i][j] = i != 0 && j != 0 ? lcs[i - 1][j - 1] + 1
-                                                 : 1;
+        for (int i = 1; i <= m; i++) {
+            for (int j = 1; j <= n; j++) {
+                if (s1.charAt(i - 1) == s2.charAt(j - 1)) {
+                    dp[i][j] = dp[i - 1][j - 1] + 1;
                 } else {
-                    int a = i == 0 ? 0
-                                   : lcs[i - 1][j];
-                    int b = j == 0 ? 0
-                                   : lcs[i][j - 1];
-                    lcs[i][j] = Math.max(a, b);
+                    dp[i][j] = Math.max(dp[i - 1][j], dp[i][j - 1]);
                 }
             }
         }
 
-        return n1 + n2 - 2 * lcs[n1 - 1][n2 - 1];
+        return dp[m][n];
     }
 }

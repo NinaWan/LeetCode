@@ -1,22 +1,20 @@
 class Solution {
     public int lengthOfLIS(int[] nums) {
-        if (null == nums || nums.length == 0) {
-            return 0;
-        }
+        int n = nums.length;
+        int[] dp = new int[n];// dp[i] - LIS ending at ith number
+        int ans = 1;
 
-        int[] lises = new int[nums.length];
-        int result = 0;
-        Arrays.fill(lises, 1);
+        Arrays.fill(dp, 1);
 
-        for (int i = 0; i < nums.length; i++) {
+        for (int i = 0; i < n; i++) {
             for (int j = 0; j < i; j++) {
-                if (nums[j] < nums[i]) {
-                    lises[i] = Math.max(lises[i], lises[j] + 1);
+                if (nums[i] > nums[j]) {
+                    dp[i] = Math.max(dp[i], dp[j] + 1);
                 }
             }
-            result = Math.max(result, lises[i]);
+            ans = Math.max(ans, dp[i]);
         }
 
-        return result;
+        return ans;
     }
 }
