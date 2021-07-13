@@ -1,28 +1,26 @@
 class Solution {
     public List<String> generateParenthesis(int n) {
-        List<String> result = new ArrayList();
-
-        dfs(result, n, n, "");
-
-        return result;
+        List<String> ans = new ArrayList();
+        backtrack(ans, n, n, "");
+        return ans;
     }
 
-    private void dfs(List<String> result, int left, int right, String temp) {
-        if (left == 0 && right == 0) {
-            result.add(temp);
+    private void backtrack(List<String> res, int left, int right, String curr) {
+        if (right < left || left < 0 || right < 0) {
             return;
         }
 
-        if (left != 0) {
-            temp += "(";
-            dfs(result, left - 1, right, temp);
-            temp = temp.substring(0, temp.length() - 1);
+        if (left == 0 && right == 0) {
+            res.add(curr);
+            return;
         }
 
-        if (right != 0 && right > left) {
-            temp += ")";
-            dfs(result, left, right - 1, temp);
-            temp = temp.substring(0, temp.length() - 1);
-        }
+        curr += "(";
+        backtrack(res, left - 1, right, curr);
+        curr = curr.substring(0, curr.length() - 1);
+
+        curr += ")";
+        backtrack(res, left, right - 1, curr);
+        curr = curr.substring(0, curr.length() - 1);
     }
 }
