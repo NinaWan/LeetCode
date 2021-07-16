@@ -12,7 +12,7 @@ class Solution {
 
         for (int index : orderedIndexes) {
             for (int flip : result) {
-                if (index + 1 <= flip) {
+                if (index + 1 <= flip) { // find the right position after flippings before
                     index = flip - index - 1;
                 }
             }
