@@ -1,10 +1,6 @@
 class Solution {
     public boolean isValid(String s) {
-        if (s == null || s.length() == 0) {
-            return true;
-        }
-
-        if (s.length() % 2 != 0) {
+        if (s.length() % 2 == 1) {
             return false;
         }
 
@@ -17,10 +13,10 @@ class Solution {
             }
         };
         for (char c : s.toCharArray()) {
-            if (stack.isEmpty() || !map.containsKey(c) || !map.get(c).equals(stack.peek())) {
+            if (map.containsKey(c) && (stack.isEmpty() || !map.get(c).equals(stack.pop()))) {
+                return false;
+            } else if (!map.containsKey(c)) {
                 stack.push(c);
-            } else {
-                stack.pop();
             }
         }
 
